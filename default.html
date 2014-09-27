@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html> <!--<![endif]-->
+
+
+<!-- ------------------------------------------------------------------
+***********************************************************************
+开发人员书写规范:
+1.所有缩进都用 TAB， 而不是空格。
+1.非必要，禁止用行内样式例如 <div style="display:block"> 
+
+
+浏览器兼容：
+	IE8+
+	FireFox
+	Webkit内核浏览器:
+		Chrome,
+		Opear(WebKit版),
+		360浏览器(7.0+),
+		360急速浏览器,
+		搜狗浏览器,
+		115浏览器,
+		UC桌面浏览器,
+		枫树浏览器,
+		Safari 5.1+
+		Safari 7+ (Mac OS)
+注:由于国内IE6-7份额已经非常低，基本是测试人员跟一些非常旧的政府机构，所以不做兼容。
+***********************************************************************
+---------------------------------------------------------------------- -->
+<head>
+
+	<!-- Basic Page Needs
+	================================================== -->
+	<meta charset="utf-8">
+	<title>找吃哒</title>
+	<meta name="description" content="">
+	<meta name="author" content="Jay">
+	<!-- 让IE浏览器用最高级内核渲染页面 还有用 Chrome 框架的页面用webkit 内核
+	================================================== -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<!-- IOS6全屏 Chrome高版本全屏
+	================================================== -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="mobile-web-app-capable" content="yes"> 
+	<!-- 让360双核浏览器用webkit内核渲染页面
+	================================================== -->
+	<meta name="renderer" content="webkit">
+	<!-- Mobile Specific Metas
+	================================================== -->
+	<!-- !!!注意 minimal-ui 是IOS7.1的新属性，最小化浏览器UI -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
+	<!-- CSS
+	================================================== -->
+	<link href="css/reset.css" rel="stylesheet" type="text/css">
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<!-- Favicons
+	================================================== -->
+	<!--<link rel="shortcut icon" href="favicon.ico" >-->
+	<!-- Android 主屏图标
+	================================================== -->	
+	<!--<link rel="icon" sizes="196x196" href="touch-icon.png">-->
+	<!-- IOS 主屏图标
+	================================================== -->
+	<!--<link rel="apple-touch-icon" href="touch-icon-iphone.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="touch-icon-ipad.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="touch-icon-iphone-retina.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="touch-icon-ipad-retina.png">-->
+		
+</head>
+<body class="app_wrap">
+<div class="app height_min_winheight">
+	<!-- Everything started here -->
+	<div class="app_containt app_width">
+		<div class="app_head">
+			<div class="app_head_left">
+				<div class="app_head_logo"></div>
+				<div class="app_switch_local">
+					<span class="appLocaction">上海</span>
+					<span class="appLocactionSwitch">[切换城市]</span>
+				</div>
+			</div>
+			<div class="app_head_right">
+				<div class="app_r_item app_bookcheck"><span class="awp">查看订单</span></div>
+				<div class="app_r_item app_signin"><span class="awp">注册</span></div>
+				<div class="app_r_item app_login"><span class="awp">登陆</span></div>
+			</div>
+		</div>
+		<div class="app_content">
+			<div class="app_con_layouts">
+				<div class="app_clt" id="app_clt">
+					<div class="app_clt_topR">
+						<div class="app_clt_topL">
+							<div class="con_tool_bar_searchBar">
+								<div class="searchBarL">
+									<input type="text" class="sbInp">
+									<input type="button" class="sbBtn" value="">
+								</div>
+							</div>
+							
+							<div class="con_tool_bar_localTotal">开通城市：潍坊</div>
+							<div class="con_tool_bar_local">泰安</div>
+							<div class="con_tool_bar_localChange">直接进入：上海 </div>
+						</div>
+					</div>
+				</div>
+				<div class="app_box height_min_contentheight">
+					<div class="app_default_img">
+						<img src="images/app-default-pic.jpg" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="app_site" id="app_site">
+		<a href="javascript:;" class="app_site_btn" id="app-order">点餐</a>
+		<a href="javascript:;" class="app_site_btn">订餐</a>
+		<a href="javascript:;" class="app_site_btn"><span class="img-qrcode"></span></a>
+		<a href="javascript:;" class="app_site_btn"><span class="img-serico"></span></a>
+		<span class="app_site_btn-backtop" id="backtop"></span>
+	</div>
+	<div class="app_footer" id="app_footer">
+		<div class="aflist_wrap">
+			<table cellpadding="0" cellspacing="0" class="aflist">
+				<tr class="aflist_col">
+					<td>
+						<p><a href="#">帮助指南</a></p>
+						<p><a href="#">点餐流程</a></p>
+						<p><a href="#">外卖流程</a></p>
+					</td>
+					<td>
+						<p><a href="#">支付方式</a></p>
+						<p><a href="#">货到付款</a></p>
+						<p><a href="#">在线支付</a></p>
+					</td>
+					<td>
+						<p><a href="#">关于我们</a></p>
+						<p><a href="#">公司介绍</a></p>
+						<p><a href="#">加入我们</a></p>
+						<p><a href="#">法律承诺</a></p>
+						<p><a href="#">法律声明</a></p>
+						<p><a href="#">用户协议</a></p>
+					</td>
+					<td>
+						<p><a href="#">消费保障</a></p>
+						<p><a href="#">餐厅资质保障</a></p>
+						<p><a href="#">退款说明</a></p>
+					</td>
+					<td>
+						<p><a href="#">商家服务</a></p>
+						<p><a href="#">商家服务说明</a></p>
+						<p><a href="#">我要开店</a></p>
+						<p><a href="#">商家后台</a></p>
+					</td>
+					<td class="callimg">
+						<a href="#" class="callimg">
+							<img src="images/foot-call-image.png" alt="call us" class="callimg">
+						</a>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="aflist_cpr">
+			<a href="#" class="linkcp"><img src="images/ft-link-image.png" alt=""></a>
+			<a href="#" class="linkcp"><img src="images/ft-link-image2.jpg" alt=""></a>
+			<p>Copyright © 2013-2014 ayidiancan.com All Rights Reserved. <a href="http://www.miibeian.gov.cn/" target="_blank">鲁ICP备13016331号</a></p>
+		</div>
+	</div>
+</div>
+</body>
+<!-- Javascript with AMD
+================================================== -->
+<script src="js/require.js" data-main="js/main" ></script>
+</html>
