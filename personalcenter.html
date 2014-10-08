@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html> <!--<![endif]-->
+
+
+<!-- ------------------------------------------------------------------
+***********************************************************************
+开发人员书写规范:
+1.所有缩进都用 TAB， 而不是空格。
+1.非必要，禁止用行内样式例如 <div style="display:block"> 
+
+
+浏览器兼容：
+	IE8+
+	FireFox
+	Webkit内核浏览器:
+		Chrome,
+		Opear(WebKit版),
+		360浏览器(7.0+),
+		360急速浏览器,
+		搜狗浏览器,
+		115浏览器,
+		UC桌面浏览器,
+		枫树浏览器,
+		Safari 5.1+
+		Safari 7+ (Mac OS)
+注:由于国内IE6-7份额已经非常低，基本是测试人员跟一些非常旧的政府机构，所以不做兼容。
+***********************************************************************
+---------------------------------------------------------------------- -->
+<head>
+
+	<!-- Basic Page Needs
+	================================================== -->
+	<meta charset="utf-8">
+	<title>找吃哒</title>
+	<meta name="description" content="">
+	<meta name="author" content="Jay">
+	<!-- 让IE浏览器用最高级内核渲染页面 还有用 Chrome 框架的页面用webkit 内核
+	================================================== -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<!-- IOS6全屏 Chrome高版本全屏
+	================================================== -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="mobile-web-app-capable" content="yes"> 
+	<!-- 让360双核浏览器用webkit内核渲染页面
+	================================================== -->
+	<meta name="renderer" content="webkit">
+	<!-- Mobile Specific Metas
+	================================================== -->
+	<!-- !!!注意 minimal-ui 是IOS7.1的新属性，最小化浏览器UI -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+	<!-- CSS
+	================================================== -->
+	<link href="css/reset.css" rel="stylesheet" type="text/css">
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<!-- Favicons
+	================================================== -->
+	<!--<link rel="shortcut icon" href="favicon.ico" >-->
+	<!-- Android 主屏图标
+	================================================== -->	
+	<!--<link rel="icon" sizes="196x196" href="touch-icon.png">-->
+	<!-- IOS 主屏图标
+	================================================== -->
+	<!--<link rel="apple-touch-icon" href="touch-icon-iphone.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="touch-icon-ipad.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="touch-icon-iphone-retina.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="touch-icon-ipad-retina.png">-->
+		
+</head>
+<body class="app_wrap">
+<div class="app height_min_winheight">
+	<!-- Everything started here -->
+	<div class="app_containt app_width">
+		<div class="app_head">
+			<div class="app_head_left">
+				<div class="app_head_logo"></div>
+				<div class="app_switch_local">
+					<span class="appLocaction">上海</span>
+					<span class="appLocactionSwitch">[切换城市]</span>
+				</div>
+			</div>
+			<div class="app_head_right">
+				<div class="app_r_item app_bookcheck"><span class="awp">商家登录</span></div>
+				<div class="app_r_item app_bookcheck f-pr" id="topbar-user"><span class="awp">毕加索的忧伤</span>
+					<div class="topbar-user-dropdown">
+						<ul class="topbar-user-dropdown-content">
+							<li><a href="#"><i class="ico-use">|</i>个人中心</a></li>
+							<li><a href="#"><i class="ico-star">|</i>我的收藏</a></li>
+							<li><a href="#"><i class="ico-address">|</i>我的地址</a></li>
+							<li><a href="#"><i class="ico-setting">|</i>安全设置</a></li>
+							<li class="end"><a href="#"><i class="ico-switch">|</i>退出登录</a></li>
+						</ul>
+						<div class="topbar-user-dropdown-bottom"></div>
+					</div>
+
+				</div>
+				<div class="app_r_item app_signin"><span class="awp">注册</span></div>
+				<div class="app_r_item app_login"><span class="awp">登陆</span></div>
+			</div>
+		</div>
+		<div class="app_content">
+			<div class="app_con_layouts">
+				<div class="app_clt" id="app_clt">
+					<div class="app_clt_topR">
+						<div class="app_clt_topL">
+							<div class="con_tool_bar_searchBar">
+								<div class="searchBarL">
+									<input type="text" class="sbInp">
+									<input type="button" class="sbBtn" value="">
+								</div>
+							</div>
+							<div class="con_tool_bar_icon"><img src="images/icon_locaction.png" alt=""></div>
+							<div class="con_tool_bar_localTotal">当前共有164家餐厅</div>
+							<div class="con_tool_bar_local">当前地址：<span id="localNow">五角场(地铁站)</span></div>
+							<div class="con_tool_bar_localChange">[更改地址]</div>
+						</div>
+					</div>
+				</div>
+				<div class="app_box height_min_contentheight">
+					
+					<div class="app_personal_banner"><img src="images/banner/personal-banner.jpg" alt=""></div>
+					
+					<div class="clearfix">
+						<div class="app_personal_sidebar">
+							<div class="sidebartitle"><span>个人中心</span></div>
+							<ul class="personalcenter-sidenav clearfix">
+								<li>
+									<div class="sidenav-first sidenav-ico01">订单中心</div>
+									<div class="sidenav-second">
+										<a href="###" class="sidenav-second-01 ico01 cur">我的外卖订单</a>
+										<a href="###" class="sidenav-second-01 ico02">我的订餐订单</a>
+									</div>
+								</li>
+								<li>
+									<div class="sidenav-first sidenav-ico02">我的收藏</div>
+									<div class="sidenav-second">
+										<a href="###" class="sidenav-second-02 ico01">我收藏的餐厅</a>
+										<a href="###" class="sidenav-second-02 ico02">我收藏的美食</a>
+									</div>
+								</li>
+								<li>
+									<div class="sidenav-first sidenav-ico03">账号相关</div>
+									<div class="sidenav-second">
+										<a href="###" class="sidenav-second-03 ico01">我的信箱</a>
+										<a href="###" class="sidenav-second-03 ico02">我的地址</a>
+										<a href="###" class="sidenav-second-03 ico03">邀请好友<em class="hottips">HOT</em></a>
+									</div>
+								</li>
+								<li class="gray">
+									<div class="sidenav-first sidenav-ico04">安全中心</div>
+									<div class="sidenav-second">
+										<a href="###" class="sidenav-second-04 ico01">修改密码</a>
+										<a href="###" class="sidenav-second-04 ico02">安全设置</a>
+									</div>
+								</li>
+							</ul>
+						</div>						
+						<div class="box_list_wrap clearfix app_personalcenter_main">
+							<div class="maintitle">个人中心</div>
+							<div class="app-marB10 app-accountbg01">
+								<div class="accountstatus">
+									<div class="clearfix app-marB10">
+										<div class="col-left">
+											<div class="avatar"></div><input type="file" class="hide">
+											<div class="safety-level-wrapper">
+												<h5>毕加索得忧伤</h5>
+												<p>
+													<span>安全等级：</span>
+													<a href="#" class="user-safety-level low">低</a>
+												</p>
+											</div>
+										</div>
+										<div class="col-right">
+											<p class="account-balance"><span>代金券：</span>0.00元</p>
+											<p class="account-balance"><span>账户余额：</span>0.00元</p>
+										</div>
+									</div>
+									<ul class="related-info clearfix">
+										<li><i class="icon-point"></i>积分：<a href="">0</a>点</li>	
+										<li><i class="icon-star"></i>收藏：<a href="">0</a>家餐厅  <a href="">0</a>份美食</li>
+										<li><i class="icon-order"></i>完成订单：<a href="">0</a>张（一个月内完成）</li>
+									</ul>
+								</div>								
+							</div>
+
+							<div class="app-marB10 clearfix">
+								<div class="f-fl latest-orders-title">最近订餐订单</div>
+								<div class="f-fl latest-orders-title gray">最近订餐订单</div>
+							</div>
+
+							<div class="clearfix">
+								<div class="f-fl app-marB10 app-marR20 app-accountbg01">
+									<div class="latest-orders-cell">
+										<h6>订单ID</h6>
+										<p><a href="#" class="icon-order">五角场(地铁站)</a></p>
+									</div>
+								</div>
+								<div class="f-fl app-marB10 app-marR20 app-accountbg01">
+									<div class="latest-orders-cell">
+										<h6>下单时间</h6>
+										<p><a href="#" class="icon-order">2014年08月31日</a></p>
+									</div>
+								</div>
+								<div class="f-fl app-marB10 app-marR20 app-accountbg01">
+									<div class="latest-orders-cell">
+										<h6>餐厅</h6>
+										<p><a href="#" class="icon-order">红鱼川菜</a></p>
+									</div>
+								</div>
+								<div class="f-fl app-marB10 app-marR20 app-accountbg01">
+									<div class="latest-orders-cell">
+										<h6>订单状态</h6>
+										<p><a href="#" class="icon-order">正在配送中</a></p>
+									</div>
+								</div>
+								<div class="f-fl app-marB10 app-accountbg01">
+									<div class="latest-orders-cell">
+										<h6>订单详情</h6>
+										<p><a href="#" class="icon-order">正在配送中</a></p>
+									</div>
+								</div>
+
+							</div>
+
+								
+
+
+							
+						</div>
+						
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="app_footer" id="app_footer">
+		<div class="aflist_wrap">
+			<table cellpadding="0" cellspacing="0" class="aflist">
+				<tr class="aflist_col">
+					<td>
+						<p><a href="#">帮助指南</a></p>
+						<p><a href="#">点餐流程</a></p>
+						<p><a href="#">外卖流程</a></p>
+					</td>
+					<td>
+						<p><a href="#">支付方式</a></p>
+						<p><a href="#">货到付款</a></p>
+						<p><a href="#">在线支付</a></p>
+					</td>
+					<td>
+						<p><a href="#">关于我们</a></p>
+						<p><a href="#">公司介绍</a></p>
+						<p><a href="#">加入我们</a></p>
+						<p><a href="#">法律承诺</a></p>
+						<p><a href="#">法律声明</a></p>
+						<p><a href="#">用户协议</a></p>
+					</td>
+					<td>
+						<p><a href="#">消费保障</a></p>
+						<p><a href="#">餐厅资质保障</a></p>
+						<p><a href="#">退款说明</a></p>
+					</td>
+					<td>
+						<p><a href="#">商家服务</a></p>
+						<p><a href="#">商家服务说明</a></p>
+						<p><a href="#">我要开店</a></p>
+						<p><a href="#">商家后台</a></p>
+					</td>
+					<td class="callimg">
+						<a href="#" class="callimg">
+							<img src="images/foot-call-image.png" alt="call us" class="callimg">
+						</a>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="aflist_cpr">
+			<a href="#" class="linkcp"><img src="images/ft-link-image.png" alt=""></a>
+			<a href="#" class="linkcp"><img src="images/ft-link-image2.jpg" alt=""></a>
+			<p>Copyright © 2013-2014 ayidiancan.com All Rights Reserved. <a href="http://www.miibeian.gov.cn/" target="_blank">鲁ICP备13016331号</a></p>
+		</div>
+	</div>
+</div>
+<div class="app_dialog_wrap">
+	<div class="app_dialog_mask"></div>	
+	<div class="app_dialog_content">
+		<div class="app_dialog_text">请选择您需要的服务<br/>外卖服务请在 <em>上午11:00前</em> 使用</div>
+		<div class="clearfix">
+			<div class="app_dialog_btn blue app_restaurant_order">点餐</div>
+			<div class="app_dialog_btn blue hide app_restaurant_order_service"><span>去餐厅吃饭<br/><b>请选择点餐服务</b></span></div>
+			<div class="app_dialog_btn red app_home_order">订餐</div>
+			<div class="app_dialog_btn red hide  app_home_order_service"><span>在家叫外卖<br/><b>请选择外卖服务</b></span></div>
+		</div>		
+		<div class="app_dialog_pic"></div>
+	</div>
+</div>
+</body>
+<!-- Javascript with AMD
+================================================== -->
+<script src="js/require.js" data-main="js/main" ></script>
+</html>

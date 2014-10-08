@@ -964,7 +964,8 @@ html.ie7 {
 .app_submain_list_menuname,
 .app_submain_list_salenum,
 .app_submain_list_grade,
-.app_submain_list_price{
+.app_submain_list_price,
+.app_submain_list_total{
 	display:block;
 	float:left;
 	margin:0 20px;
@@ -972,6 +973,7 @@ html.ie7 {
 	line-height: 30px;
 	text-align:left;
 	cursor:default;
+	height:100%;
 }
 
 .app_submain_list_menuname{
@@ -1102,3 +1104,647 @@ html.ie7 {
 }
 .app_submain_myorder .pay{background: #c10262;}
 .app_submain_myorder .empty{background: #206bab;}
+
+.app_submain_pay{
+	background: #ececeb;
+}
+
+.app_submain_pay .app_submain_content{
+	width:575px; padding:30px 20px;
+	background:#fff;
+}
+
+.app_submain_pay .payprice{
+	padding-bottom:15px;
+	font-size:12px; color:#727171;
+}
+.app_submain_pay .payprice>span{
+	color:#ee7800
+}
+
+.app_submain_pay .paymethod{
+	position:relative;
+	padding:15px;
+	border:1px solid #e3e3e3; background:#f7f7f7;
+	border-radius:5px;
+}
+.app_submain_pay .paymethod>h3{
+	font-size:14px; color:#676767;
+	margin-top:5px; margin-bottom:10px;
+}
+
+.app_submain_pay .paymethodcell{
+	display:block; float:left;
+	height:40px; margin-right:30px; margin-bottom:5px;
+	line-height:40px; vertical-align:middle;
+}
+.app_submain_pay .paymethodradio{
+	 float:left; display:inline-block; height:40px;	cursor:default;
+}
+.app_submain_pay .paymethodico{
+	 float:left; display:inline-block;
+	width:128px; height:38px; border:1px solid #e7e7e7; 
+	background:#fff url(../images/pay/paymethod-ico01.gif) no-repeat center center;
+}
+.app_submain_pay .bank-bocm{background-image: url(../images/pay/bank-bocm.gif)}
+.app_submain_pay .bank-icbc{background-image: url(../images/pay/bank-icbc.gif)}
+.app_submain_pay .bank-ccb{background-image: url(../images/pay/bank-ccb.gif)}
+
+.app_submain_pay .bank-aboc{background-image: url(../images/pay/bank-aboc.gif)}
+.app_submain_pay .bank-cmb{background-image: url(../images/pay/bank-cmb.gif)}
+.app_submain_pay .bank-boc{background-image: url(../images/pay/bank-boc.gif)}
+
+.app_submain_pay .bank-psbc{background-image: url(../images/pay/bank-psbc.gif)}
+.app_submain_pay .bank-cib{background-image: url(../images/pay/bank-cib.gif)}
+.app_submain_pay .bank-szpab{background-image: url(../images/pay/bank-szpab.gif)}
+
+.app_submain_pay .bank-cgb{background-image: url(../images/pay/bank-cgb.gif)}
+.app_submain_pay .bank-citic{background-image: url(../images/pay/bank-citic.gif)}
+.app_submain_pay .bank-cmbc{background-image: url(../images/pay/bank-cmbc.gif)}
+
+.app_submain_pay .paymethod .btn-pay{
+	position:absolute; right:0; bottom:-50px;
+	width:100px; height:40px; padding:0; margin:0; border:none; background:#ff8901; border-radius:5px;
+	font:bold 16px/40px 'simsun'; color:#fff; text-align:center;
+	cursor:pointer;
+}
+
+.app_submain_pay .paytips{
+	margin-top:25px;
+	padding:0 20px;
+	font:12px/20px 'microsoft yahei'; color:#727171;
+}
+
+.app_submain_pay .paytips>.title{
+	display:block; padding-bottom:8px;
+	font-size: 14px;
+	color:#e8380d;
+}
+
+
+
+.app_submain_order{
+	background: #ececeb;
+}
+
+.app_submain_order .app_submain_content{	
+	min-height:500px;
+	background:#fff;
+}
+.app_submain_order .ordertitle{
+	height:65px;
+	background:url(../images/app-ico-logo.png) no-repeat 15px 5px;
+}
+.app_submain_order .ordertitle>.orderprogress{
+	float:right; position:relative;
+	width:252px; height:13px; margin:32px 50px 0 0;
+	background:url(../images/app-ico-progress.png) no-repeat 0 0;
+}
+
+.app_submain_order .ordertitle>.orderprogress>em{
+	position:absolute;top:-18px;
+	font-size:12px; font-family:'microsoft yahei';
+	color:#717071;
+}
+.app_submain_order .ordertitle>.orderprogress>.pos1{
+	left:-18px;
+}
+.app_submain_order .ordertitle>.orderprogress>.pos2{
+	left:103px;
+}
+.app_submain_order .ordertitle>.orderprogress>.pos3{
+	right:-18px;
+}
+
+.app_submain_order .orderlist{
+	background: #bae3f9;
+}
+
+.app_submain_order .orderlist .orderlist-head{
+	height: 35px; padding:0 15px;
+}
+
+.app_submain_order .orderlist .orderlist-foot{
+	height: 30px; padding:0 15px;
+}
+.orderlist-head .app_submain_list_menuname, .orderlist-foot .app_submain_list_menuname,
+.orderlist-head .app_submain_list_salenum, .orderlist-foot .app_submain_list_salenum,
+.orderlist-head .app_submain_list_price, .orderlist-foot .app_submain_list_price,
+.orderlist-head .app_submain_list_total, .orderlist-foot .app_submain_list_total{
+	height:100%;
+	line-height:35px;
+	font-size:14px;
+	color:#37444a;
+	margin:0 10px;	
+	width:65px;
+	padding:0;
+	text-align:center;
+}
+.orderlist-foot .app_submain_list_menuname,
+.orderlist-foot .app_submain_list_salenum,
+.orderlist-foot .app_submain_list_price,
+.orderlist-foot .app_submain_list_total{
+	height:30px;
+	line-height:30px;
+	font-size:12px;
+}
+.orderlist-foot .app_submain_list_menuname{
+	padding-left:0;
+	width:310px;
+	text-align:left;
+}
+.app_submain_list_menuname>a{
+	text-decoration:none;
+	color:#37444a;
+}
+.app_submain_list_menuname>a:hover{
+	text-decoration:underline;
+}
+.orderlist-foot .app_submain_list_salenum{
+  margin:0; width:85px; text-align:right;
+}
+.orderlist-foot .app_submain_list_total{
+	margin:0; width:85px; 
+}
+.orderlist-head .app_submain_list_menuname{
+	padding-left:10px;
+	width:300px;
+	text-align:left;
+}
+.orderlist-ul{
+	padding:0 15px;
+	background:#005090;
+}
+
+
+.orderlist-ul .app_submain_list_content:first-child{
+	border-top:none;
+}
+
+.orderlist-ul .app_submain_list_content.orderlist-ul-li-end{
+	border-top:1px solid #b1b3b5;
+}
+
+.orderlist-ul .app_submain_list_content .app_submain_list_menuname,
+.orderlist-ul .app_submain_list_content .app_submain_list_salenum,
+.orderlist-ul .app_submain_list_content .app_submain_list_price,
+.orderlist-ul .app_submain_list_content .app_submain_list_total{
+	color:#ffffff;
+	margin:0 10px;
+	width:65px;
+	padding:0;
+	text-align:center;
+}
+
+.orderlist-ul .app_submain_list_content .app_submain_list_menuname{
+	background:none;
+	padding-left:0px;
+	width:310px;
+	text-align:left;
+}
+
+.orderlist-ul .app_submain_list_content .app_submain_list_salenum>span{
+	float:left;
+	display:block; margin:7px;
+	height:14px; line-height:14px; border:1px solid #fff; text-align:center;
+}
+.orderlist-minus,
+.orderlist-plus{
+	display:inline-block;
+	float:left;
+	width:12px;
+}
+.orderlist-minus{border-right:1px solid #fff;}
+.orderlist-plus{border-left:1px solid #fff;}
+.orderlist-input{
+	float:left;
+	display:inline-block; width:22px; height:14px;
+	padding:0; margin:0; border:none; background:none; 
+	font:12px/14px 'microsoft yahei'; color:#fff; text-align:center;
+}
+
+.app_submain_order .orderform{
+	height:32px; font:12px/32px 'microsoft yahei'; color:#717071;
+}
+.app_submain_order .orderform .orderform-btn{
+	float:right;
+	margin:5px 20px; padding:0 10px; border:none; background:#e93956;
+	height:22px; font:14px/22px 'microsoft yahei'; color:#fff;
+	cursor:pointer;
+}
+
+.orderformcell{
+	height:16px; margin:0 20px 10px; padding:0 0 0 16px; 
+	background:url(../images/app-ico-circle.png) no-repeat 0 1px;
+	font:12px/16px 'microsoft yahei'; color:#717071;	
+}
+
+.orderformcell>label{
+	float:left;
+}
+.orderformcell>input[type="password"],
+.orderformcell>input[type="text"]{
+	float:left;
+	width:140px; height:16px; padding:0 5px; margin:0 10px 0 0; border:none; background:#9e9e9f;
+	font:12px/16px 'microsoft yahei'; color:#fff;
+}
+.orderformcell>span>input[type="radio"]{
+	height:16px; margin:0 3px 0 5px; padding:0; line-height:16px; vertical-align:middle; cursor:default;
+}
+
+.orderformcell-title{
+	position:relative;
+	margin:5px 20px 20px 0; height:14px;
+	border-bottom:1px dashed #b4b4b5;
+}
+.orderformcell-title>span{
+	position:absolute; top:1px; left:0; 
+}
+.orderformcell-title-tips{
+	display:inline-block; padding-right:18px;
+	width:100px; height:26px; background:#fff url(../images/order-title-bg.png) no-repeat 0 0;
+	font:14px/26px 'microsoft yahei'; color:#fff; text-align:center;
+}
+.orderform .orderformcell-title-tips{
+	margin:3px 30px 3px 0;
+}
+
+.orderformcell-textarea{
+	margin:0 20px 10px 15px;
+}
+.orderformcell-textarea>h5{font:normal 12px/24px 'microsoft yahei'; color:#717071;}
+.orderformcell-textarea>textarea{
+	width:570px; height:60px;margin:0; padding:4px; border:1px solid #717071;
+	font:12px/18px 'microsoft yahei'; color:#717071;
+	overflow:auto;
+	resize:none;
+}
+
+.app_personal_banner{padding:10px 0 20px; text-align:center;}
+.app_personal_sidebar{
+	float:left; width:180px; padding-bottom:20px;
+}
+
+.app_personal_sidebar .sidebartitle{
+	width:100px; height:26px; 
+	padding:0 8px; margin-bottom:10px; background:url(../images/app-personal-bg1.png) no-repeat right 0;
+	font:bold 14px/26px 'microsoft yahei'; color:#fff;
+}
+.app_personal_sidebar .sidebartitle.gray{
+	background:url(../images/app-personal-bg1_gray.png) no-repeat right 0;
+}
+.app_personal_sidebar .sidebartitle>span{
+	display:inline-block; padding-left:20px; background:url(../images/app-personal-ico00.png) no-repeat 0 center;
+}
+.app_personal_sidebar .personalcenter-sidenav{
+	width:116px;
+}
+.app_personal_sidebar .personalcenter-sidenav>li{
+	width:100px; min-height:26px;
+	padding:0 8px; margin-top:5px; background:url(../images/app-personal-bg2.png) no-repeat right 0;
+}
+.app_personal_sidebar .personalcenter-sidenav>li.gray{
+	background:url(../images/app-personal-bg2_gray.png) no-repeat right 0;
+}
+
+.app_personal_sidebar .personalcenter-sidenav .sidenav-first{
+	padding-left:20px; font:14px/26px 'microsoft yahei'; color:#fff;
+	background-repeat: no-repeat;
+	background-position: 0 center;
+}
+.app_personal_sidebar .personalcenter-sidenav .sidenav-second{
+	margin-top:3px;
+}
+.app_personal_sidebar .personalcenter-sidenav .sidenav-second>a{
+	display:block; padding-left:20px; background-repeat:no-repeat; background-position:2px center;
+	font-size:12px; line-height:18px; color:#595758; 
+	text-decoration:none;
+}
+.sidenav-ico01{background-image: url(../images/app-personal-ico01.png);}
+.sidenav-ico02{background-image: url(../images/app-personal-ico02.png);}
+.sidenav-ico03{background-image: url(../images/app-personal-ico03.png);}
+.sidenav-ico04{background-image: url(../images/app-personal-ico04.png);}
+
+.app_personal_sidebar .personalcenter-sidenav .sidenav-second>a.cur,
+.app_personal_sidebar .personalcenter-sidenav .sidenav-second>a:hover{color:#3798cd}
+.sidenav-second-01.ico01{background-image:url(../images/app-personal-icon01.png);}
+.sidenav-second-01.ico01.cur,
+.sidenav-second-01.ico01:hover{background-image:url(../images/app-personal-icon01hov.png);}
+.sidenav-second-01.ico02{background-image:url(../images/app-personal-icon02.png);}
+.sidenav-second-01.ico02.cur,
+.sidenav-second-01.ico02:hover{background-image:url(../images/app-personal-icon02hov.png);}
+.sidenav-second-02.ico01{background-image:url(../images/app-personal-icon03.png);}
+.sidenav-second-02.ico01.cur,
+.sidenav-second-02.ico01:hover{background-image:url(../images/app-personal-icon03hov.png);}
+.sidenav-second-02.ico02{background-image:url(../images/app-personal-icon04.png);}
+.sidenav-second-02.ico02.cur,
+.sidenav-second-02.ico02:hover{background-image:url(../images/app-personal-icon04hov.png);}
+.sidenav-second-03.ico01{background-image:url(../images/app-personal-icon05.png);}
+.sidenav-second-03.ico01.cur,
+.sidenav-second-03.ico01:hover{background-image:url(../images/app-personal-icon05hov.png);}
+.sidenav-second-03.ico02{background-image:url(../images/app-personal-icon06.png);}
+.sidenav-second-03.ico02.cur,
+.sidenav-second-03.ico02:hover{background-image:url(../images/app-personal-icon06hov.png);}
+.sidenav-second-03.ico03{background-image:url(../images/app-personal-icon07.png);}
+.sidenav-second-03.ico03.cur,
+.sidenav-second-03.ico03:hover{background-image:url(../images/app-personal-icon07hov.png);}
+.sidenav-second-04.ico01{background-image:url(../images/app-personal-icon08.png);}
+.sidenav-second-04.ico01.cur,
+.sidenav-second-04.ico01:hover{background-image:url(../images/app-personal-icon08hov.png);}
+.sidenav-second-04.ico02{background-image:url(../images/app-personal-icon09.png);}
+.sidenav-second-04.ico02.cur,
+.sidenav-second-04.ico02:hover{background-image:url(../images/app-personal-icon09hov.png);}
+.app_personal_sidebar .personalcenter-sidenav .sidenav-second>a.sidenav-second-03.ico03{background-position:0 center;}
+.hottips{display:inline-block; padding:0 2px; margin-left:2px; background:#e71f1b; font-size:12px; line-height:14px; color:#fff;}
+
+
+.app_personalcenter_main{
+	float:left; width:812px; min-height:350px; padding:0 0 35px;
+}
+.app_personalcenter_main .maintitle{
+	height:26px; background:#1d6cae; padding-left:20px; margin-bottom:5px;
+	font:bold 14px/26px 'microsoft yahei'; color:#fff;
+}
+.app_personalcenter_main .app-accountbg01{
+	padding-bottom:10px; background:url(../images/app-account-bg01.png) repeat-x 0 bottom;
+}
+.app_personalcenter_main .accountstatus{
+	padding:10px 20px; background:#e6e4e5;
+}
+
+.app_personalcenter_main .accountstatus .col-left{
+	float:left; 
+	width:300px;
+	padding-right:20px;
+}
+.app_personalcenter_main .accountstatus .avatar{
+	float:left;
+	width:60px; height:60px; margin-right:10px;
+	background:#d2d3d5 url(../images/app-account-ico01.png) no-repeat center center; border-radius:5px;
+	cursor:pointer;
+}
+.accountstatus .safety-level-wrapper{
+	float:left;
+	width:200px;
+}
+.accountstatus .safety-level-wrapper h5{
+ 	font-size:14px;
+ 	color:#595758;
+ 	margin-top:5px;
+ 	margin-bottom:20px;
+}
+.accountstatus .safety-level-wrapper p{
+	font-size:12px; color:#595758;
+} 
+.accountstatus .safety-level-wrapper .user-safety-level{
+	display:inline-block;
+	padding-left:100px;
+	height:12px; line-height:12px;
+	background:url(../images/app-account-ico02.png) no-repeat 0 center;
+	text-decoration:none;
+}
+.accountstatus .safety-level-wrapper .user-safety-level:hover{
+	text-decoration:underline;
+}
+.accountstatus .safety-level-wrapper .user-safety-level.low{
+	color:#595758;
+}
+
+.app_personalcenter_main .accountstatus .col-right{
+	float:left;
+}
+
+.app_personalcenter_main .accountstatus .account-balance{
+	margin-bottom:5px;
+	font-size:24px;
+	color:#216cad;
+}
+.app_personalcenter_main .accountstatus .account-balance>span{
+	display:inline-block;
+	width:70px;
+	text-align:right;
+	font-size:14px
+}
+.app_personalcenter_main .accountstatus .related-info>li{
+	float:left;
+	width:300px; margin:8px 20px 0 0;
+	font:12px/14px 'microsoft yahei'; color:#595758;
+}
+.app_personalcenter_main .accountstatus .related-info>li:first-child{
+	width:640px;
+}
+.app_personalcenter_main .accountstatus .related-info>li>a{
+	text-decoration:none;
+	color:#595758;
+}
+.app_personalcenter_main .accountstatus .related-info>li>i{
+	float:left; display:inline-block; line-height:14px;
+	width:14px; height:14px; margin-right:5px;
+	background-repeat:no-repeat;
+	background-position: center center;
+}
+.related-info .icon-point,
+.related-info .icon-order{background-image:url(../images/app-account-ico03.png)}
+.related-info .icon-star{background-image:url(../images/app-account-ico04.png)}
+
+.app_personalcenter_main .latest-orders-title{
+	display:inline-block; width:115px; height:26px; padding:0 15px; margin-right:20px;
+	background:url(../images/app-personal-bg2.png) no-repeat 0 0;
+	font:14px/26px 'microsoft yahei'; color:#fff;
+} 
+
+.app_personalcenter_main .latest-orders-title.gray{
+	background-image:url(../images/app-personal-bg2_gray.png)
+}
+
+.app_personalcenter_main .latest-orders-cell{
+	width:145px; min-height:70px; background:#e6e4e5;
+}
+
+.app_personalcenter_main .latest-orders-cell>h6{
+	height:25px; background:#a0a0a0; 
+	font:14px/25px 'microsoft yahei'; color:#fff; text-align:center;
+}
+
+.app_personalcenter_main .latest-orders-cell>p{
+	margin-top:10px;
+	font:12px/20px 'microsoft yahei'; color:#727171; text-align:center;
+}
+
+.app_personalcenter_main .latest-orders-cell>p>.icon-order{
+	display:inline-block; padding-left:18px;  
+	background:url(../images/app-account-ico05.png) no-repeat 0 center;
+	text-decoration:none;
+	color:#727171;
+}
+
+.topbar-user-dropdown{
+	display:none;
+	position:absolute; top:22px; left:50%;
+	width:111px; padding-top:10px; margin-left:-55px; background:url(../images/app-topdropdown-tbg.png) no-repeat 0 0;
+}
+.topbar-user-dropdown-content{
+	width:111px; min-height:90px; background:#145385 url(../images/app-topdropdown-cbg.png) no-repeat 0 0;
+}
+.topbar-user-dropdown-content>li{
+	margin:0 1px; height:20px; border-bottom:1px solid #d5c4b3;
+	font:12px/20px 'microsoft yahei'; color:#fff;
+	text-align:center;
+}
+.topbar-user-dropdown-content>li.end{
+	border-bottom:0;
+}
+.topbar-user-dropdown-content>li>a{
+	display:inline-block;
+	color:#fff;
+	text-decoration:none;
+}
+.topbar-user-dropdown-content>li:hover{
+	border-bottom:1px solid #9c7653;
+}
+.topbar-user-dropdown-content>li.end:hover{
+	border-bottom:0;
+}
+.topbar-user-dropdown-content>li>a:hover{
+	color:#eca616;
+}
+.topbar-user-dropdown-bottom{
+	width:111px; height:10px; background:url(../images/app-topdropdown-bbg.png) no-repeat 0 0;
+}
+
+.topbar-user-dropdown-content>li>a>i{
+	float:left;
+	padding-left:20px; height:20px; margin-right:7px;
+	background-image:url(../images/topbar-user-dropdown-ico.png);
+	background-repeat:no-repeat;
+}
+
+.topbar-user-dropdown-content>li>a>i.ico-use{background-position:0 2px;}
+.topbar-user-dropdown-content>li>a:hover>i.ico-use{background-position:-24px 2px;}
+
+.topbar-user-dropdown-content>li>a>i.ico-star{background-position:0 -18px;}
+.topbar-user-dropdown-content>li>a:hover>i.ico-star{background-position:-24px -18px;}
+
+.topbar-user-dropdown-content>li>a>i.ico-address{background-position:0 -38px;}
+.topbar-user-dropdown-content>li>a:hover>i.ico-address{background-position:-24px -38px;}
+
+.topbar-user-dropdown-content>li>a>i.ico-setting{background-position:0 -58px;}
+.topbar-user-dropdown-content>li>a:hover>i.ico-setting{background-position:-24px -58px;}
+
+.topbar-user-dropdown-content>li>a>i.ico-switch{background-position:0 -77px;}
+.topbar-user-dropdown-content>li>a:hover>i.ico-switch{background-position:-24px -77px;}
+
+.app_personalcenter_main .blockwrap{
+	background:#eeefef;
+	padding:10px 0 0;
+	margin-bottom:20px;
+}
+
+.app_personalcenter_main .orderformcell-textarea{
+	margin-left:0;
+}
+.app_personalcenter_main .orderformcell-textarea>textarea{
+	width:780px;
+}
+.app-changepassword{position:relative;}
+.app-changepassword .orderformcell>label{width:75px;}
+.app-changepassword .orderformcell>input[type="text"],
+.app-changepassword .orderformcell>input[type="password"]{
+	width:220px; background:#fff; color:#9e9e9f;
+}
+
+.app-changepassword .changepassword-btn{
+	position:absolute; bottom:10px; right:20px;
+	padding:0 10px; border:none; background:#727172; border-radius:3px;
+	height:22px; font:14px/22px 'microsoft yahei'; color:#fff;
+	cursor:pointer;
+}
+
+.app_personalcenter_main .favor_tips{
+	padding:5px 20px; margin-bottom:10px; font:12px/16px 'microsoft yahei'; color:#595758;
+}
+.app_personalcenter_main .favor_table,
+.app_personalcenter_main .email_table,
+.app_personalcenter_main .address_table{
+	width:100%; margin-bottom:10px;
+}
+
+.app_personalcenter_main .address_table thead th,
+.app_personalcenter_main .email_table thead th,
+.app_personalcenter_main .favor_table thead th{
+	padding:0 20px; font:12px/22px 'microsoft yahei'; color:#595758;
+}
+
+.app_personalcenter_main .address_table thead th,
+.app_personalcenter_main .email_table thead th{
+	background:#eeefef;
+}
+
+.app_personalcenter_main.app_personacenter_address .latest-orders-title{
+	width:90px; background-position:right 0; text-indent:10px;
+}
+
+.personalcenter_tips,
+.address_tips{
+	font-size:12px; padding:10px 2px 5px; color:#4a4a49;
+}
+
+.app_personalcenter_main .app-invitefriend{
+	padding:10px; min-height:50px; font-size:12px; color:#4a4a4a;
+}
+
+.app_foot_wrap{	
+	padding:25px;
+	background:#ececeb;
+	font:14px/28px 'microsoft yahei'; color:#352d2b;
+}
+
+.app_foot_titleL, 
+.app_foot_titleR{
+	display:inline-block;
+	height:32px;
+	background-image:url(../images/app-foot-title.png);
+	background-repeat:no-repeat;
+}
+
+.app_foot_titleL{
+	padding-left:15px;
+	background-position:0 0;
+}
+.app_foot_titleR{
+	padding-right:15px;
+	background-position:right -34px;
+	min-width:90px;
+	line-height:32px; color:#fff;
+}
+
+.app-foot-ico{
+	padding-left:25px;
+	background:url(../images/app-ico-circle.png) no-repeat 2px 9px;
+}
+
+.app-foot-ico.blue{
+	background-image:url(../images/app-ico-circle_blue.png);
+	color:#00a0e9;
+}
+
+.app_foot_tips{
+	padding:10px 25px;
+	background:#f6ab00;
+	font:12px/20px 'microsoft yahei'; color:#fff;
+}
+
+
+.app_foot_dllist{
+	float:left; 
+	width:50%; margin-bottom:40px;
+}
+
+.app_foot_dllist>dt{
+	float:left; margin:0 25px;
+}
+.app_foot_dllist>dd{
+	float:left;
+	font-size: 12px; line-height:24px;
+	color:#6b6b6b;
+}

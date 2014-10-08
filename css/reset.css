@@ -222,3 +222,14 @@ only screen and (min-device-pixel-ratio: 2) {}
 font.red {color:red;}
 font.gray {color:#a1a1a1;}
 .hide{display:none;}
+
+.yellow{color:#f6ab00;}
+
+.app-pad10{padding:10px;}
+.app-marT10{margin-top:10px}
+.app-marB10{margin-bottom:10px}
+.app-marB15{margin-bottom:15px}
+.app-marR10{margin-right:10px}
+.app-marR20{margin-right:20px}
+.app-padL15{padding-left:15px}
+.app-padL25{padding-left:25px}

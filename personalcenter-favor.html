@@ -50,7 +50,7 @@
 	<!-- Mobile Specific Metas
 	================================================== -->
 	<!-- !!!注意 minimal-ui 是IOS7.1的新属性，最小化浏览器UI -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
 	<!-- CSS
 	================================================== -->
 	<link href="css/reset.css" rel="stylesheet" type="text/css">
@@ -82,52 +82,122 @@
 				</div>
 			</div>
 			<div class="app_head_right">
-				<div class="app_r_item app_bookcheck"><span class="awp">查看订单</span></div>
+				<div class="app_r_item app_bookcheck"><span class="awp">商家登录</span></div>
+				<div class="app_r_item app_bookcheck f-pr" id="topbar-user"><span class="awp">毕加索的忧伤</span>
+					<div class="topbar-user-dropdown">
+						<ul class="topbar-user-dropdown-content">
+							<li><a href="#"><i class="ico-use">|</i>个人中心</a></li>
+							<li><a href="#"><i class="ico-star">|</i>我的收藏</a></li>
+							<li><a href="#"><i class="ico-address">|</i>我的地址</a></li>
+							<li><a href="#"><i class="ico-setting">|</i>安全设置</a></li>
+							<li class="end"><a href="#"><i class="ico-switch">|</i>退出登录</a></li>
+						</ul>
+						<div class="topbar-user-dropdown-bottom"></div>
+					</div>
+
+				</div>
 				<div class="app_r_item app_signin"><span class="awp">注册</span></div>
-				<div class="app_r_item app_login cur"><span class="awp">登陆</span></div>
+				<div class="app_r_item app_login"><span class="awp">登陆</span></div>
 			</div>
 		</div>
 		<div class="app_content">
 			<div class="app_con_layouts">
-				<div class="app_clt app_login" id="app_clt">
+				<div class="app_clt" id="app_clt">
 					<div class="app_clt_topR">
 						<div class="app_clt_topL">
+							<div class="con_tool_bar_searchBar">
+								<div class="searchBarL">
+									<input type="text" class="sbInp">
+									<input type="button" class="sbBtn" value="">
+								</div>
+							</div>
+							<div class="con_tool_bar_icon"><img src="images/icon_locaction.png" alt=""></div>
+							<div class="con_tool_bar_localTotal">当前共有164家餐厅</div>
+							<div class="con_tool_bar_local">当前地址：<span id="localNow">五角场(地铁站)</span></div>
+							<div class="con_tool_bar_localChange">[更改地址]</div>
 						</div>
 					</div>
 				</div>
-				<div class="app_login_box height_min_contentheight">
-					<div class="app_login_container">
-						<div class="app_login_form">
-							<div class="app_login_form_group">
-								<a href="javascript:;" class="app-login-formbg btn-current">会员登录</a><a href="javascript:;" class="app-login-formbg">个人注册</a>
-							</div>
-							<div class="app_login_form_group">
-								<label class="app-login-label">用户名／Email：</label>
-								<input type="text" class="app-login-input" value="" />
-							</div>
-							<div class="app_login_form_group">
-								<label class="app-login-label">密码：</label>
-								<input type="password" class="app-login-input" value="" />
-							</div>
-							<div class="app_login_form_group">
-								<label class="app-login-label">验证码：</label>
-								<div class="app_login_form_group clearfix">
-									<input type="text" class="app-login-identify" value="" />
-									<span class="app-login-identifycode"><img src="images/code.png" alt=""></span>
-									<span class="app-login-code-purge">看不清,换一张</span>
-								</div>
-								<input type="checkbox" id="green" class="app-login-checkbox" checked /><label for="green" class="useagreement app-login-label-check">我同意使用条款和协议</label>
-							</div>
-							<div class="app_login_form_group">
-								<button type="button" class="app-login-submit">登陆</button>
-							</div>
+				<div class="app_box height_min_contentheight">
+					
+					<div class="app_personal_banner"><img src="images/banner/personal-banner.jpg" alt=""></div>
+					
+					<div class="clearfix">
+						<div class="app_personal_sidebar">
+							<div class="sidebartitle"><span>个人中心</span></div>
+							<ul class="personalcenter-sidenav clearfix">
+								<li>
+									<div class="sidenav-first sidenav-ico01">订单中心</div>
+									<div class="sidenav-second">
+										<a href="###" class="sidenav-second-01 ico01 cur">我的外卖订单</a>
+										<a href="###" class="sidenav-second-01 ico02">我的订餐订单</a>
+									</div>
+								</li>
+								<li>
+									<div class="sidenav-first sidenav-ico02">我的收藏</div>
+									<div class="sidenav-second">
+										<a href="###" class="sidenav-second-02 ico01">我收藏的餐厅</a>
+										<a href="###" class="sidenav-second-02 ico02">我收藏的美食</a>
+									</div>
+								</li>
+								<li>
+									<div class="sidenav-first sidenav-ico03">账号相关</div>
+									<div class="sidenav-second">
+										<a href="###" class="sidenav-second-03 ico01">我的信箱</a>
+										<a href="###" class="sidenav-second-03 ico02">我的地址</a>
+										<a href="###" class="sidenav-second-03 ico03">邀请好友<em class="hottips">HOT</em></a>
+									</div>
+								</li>
+								<li class="gray">
+									<div class="sidenav-first sidenav-ico04">安全中心</div>
+									<div class="sidenav-second">
+										<a href="###" class="sidenav-second-04 ico01">修改密码</a>
+										<a href="###" class="sidenav-second-04 ico02">安全设置</a>
+									</div>
+								</li>
+							</ul>
+						</div>						
+						<div class="box_list_wrap clearfix app_personalcenter_main">
+							<div class="maintitle">我的收藏餐厅</div>	
+							
+							<div class="blockwrap favor_tips">我收藏的其他地区的餐厅-共0个 》暂无收藏</div>	
+
+							<table class="favor_table">
+							    <thead>
+							      <tr>
+							        <th width="20%">美食</th>
+							        <th width="20%">所属餐厅</th>
+							        <th width="10%">单价</th>
+							        <th width="20%">订购</th>
+							        <th width="20%">人气</th>
+							        <th width="10%">删除</th>
+							      </tr>
+							    </thead>
+							    <tbody>
+							    </tbody>
+							</table>
+
+							<table class="email_table">
+							    <thead>
+							      <tr>
+							        <th width="33%">编号</th>
+							        <th width="33%">邮件内容</th>
+							        <th width="33%">状态</th>
+							      </tr>
+							    </thead>
+							    <tbody>
+							    </tbody>
+							</table>
+
 						</div>
-						<div class="app_login_img"></div>	
-					</div>					
+						
+					</div>
+					
 				</div>
 			</div>
 		</div>
 	</div>
+	
 	<div class="app_footer" id="app_footer">
 		<div class="aflist_wrap">
 			<table cellpadding="0" cellspacing="0" class="aflist">
@@ -174,6 +244,19 @@
 			<a href="#" class="linkcp"><img src="images/ft-link-image2.jpg" alt=""></a>
 			<p>Copyright © 2013-2014 ayidiancan.com All Rights Reserved. <a href="http://www.miibeian.gov.cn/" target="_blank">鲁ICP备13016331号</a></p>
 		</div>
+	</div>
+</div>
+<div class="app_dialog_wrap">
+	<div class="app_dialog_mask"></div>	
+	<div class="app_dialog_content">
+		<div class="app_dialog_text">请选择您需要的服务<br/>外卖服务请在 <em>上午11:00前</em> 使用</div>
+		<div class="clearfix">
+			<div class="app_dialog_btn blue app_restaurant_order">点餐</div>
+			<div class="app_dialog_btn blue hide app_restaurant_order_service"><span>去餐厅吃饭<br/><b>请选择点餐服务</b></span></div>
+			<div class="app_dialog_btn red app_home_order">订餐</div>
+			<div class="app_dialog_btn red hide  app_home_order_service"><span>在家叫外卖<br/><b>请选择外卖服务</b></span></div>
+		</div>		
+		<div class="app_dialog_pic"></div>
 	</div>
 </div>
 </body>

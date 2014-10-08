@@ -111,12 +111,12 @@ function floathovereffect(){
 
 function fadeInhoveffect(select, target){
 	var timeid=null;
-	select.mouseover(function(){
+	select.mouseenter(function(){
 		var $this=$(this);
 			timeid=setTimeout(function(){
 				$this.find(target).fadeIn(200);
 			},100);		
-	}).mouseout(function(){		
+	}).mouseleave(function(){		
 		clearTimeout(timeid);
 		$(this).find(target).fadeOut(100);	
 	})
@@ -147,9 +147,42 @@ function rosefunction() {
 	
 	fadeInhoveffect($('.app_submain_list_content .app_submain_list_menuname') , '.app_submain_hotalimg');
 
+	$('.avatar').click(function(){
+		$(this).next('input[type="file"]').trigger('click');
+	});
 
+	fadeInhoveffect($('#topbar-user'), '.topbar-user-dropdown');
+	
 };
-
+//links 链接跳转在这里执行
+function links() {
+	$(".app_head_logo").on("click", function() {
+		window.location.href = "index.html"
+	});
+	
+	$(".app-login-formbg").eq(0).on("click", function() {
+		window.location.href = "login.html"
+	});
+	$(".app-login-formbg").eq(1).on("click", function() {
+		window.location.href = "register.html"
+	});
+	$(".app_head_right").on("click", ".app_signin", function() {
+		window.location.href = "register.html"
+	}).on("click", ".app_login", function() {
+		window.location.href = "login.html"
+	});
+	
+	
+	$(".app_bookcheck").on("click", function() {
+		window.location.href = "personalcenter-order.html"
+	});
+	
+	
+	$(".con_tool_bar_localChange").on("click", function() {
+		window.location.href = "default.html"
+	});
+	
+}
 
 
 var jayfunction = function() {
@@ -163,6 +196,8 @@ var jayfunction = function() {
 	//SIDESHOW_INDEX
 	sideshow($(".app-slideshow"));
 	rosefunction();
+	//links
+	links();
 };
 
 
