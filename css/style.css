@@ -1748,3 +1748,35 @@ html.ie7 {
 	font-size: 12px; line-height:24px;
 	color:#6b6b6b;
 }
+
+.gray_inner {
+	border: 10px #fff solid;
+	padding: 20px;
+	background-color: #e8e8e8;
+}
+
+.gi-title {
+	line-height: 48px;
+	font-size: 30px;
+	color: #585858;
+	border-bottom: solid 1px #b5b5b5;
+}
+.gi-title-h4 {
+	margin:1px 0 0;
+	background-color: #edd685;
+	padding: 0 6px;
+	line-height: 24px;
+	color: #585858;
+	font-size: 12px;
+	font-weight: normal;
+}
+.bind-phone-table {
+	vertical-align: middle;
+}
+
+.bind-phone-table th {
+	padding-right: 8px;
+	font-size: 20px;
+	color: #585858;
+	font-weight: bold;
+}
