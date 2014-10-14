@@ -183,7 +183,102 @@ function links() {
 	});
 	
 }
-
+//orders 订餐页面js  这里我假设我读取了一个jsonp，后面请自己定义jsonp这里只是参考
+function orders() {
+	var $temp = 
+			'<div class="app_submain_list_content clearfix">'+
+			'	<div class="app_submain_list_menuname"><font>名字</font> <span class="app_submain_hotalimg"><img src="images/app_subhotal_img.png" alt=""></span> </div>'+
+			'	<div class="app_submain_list_salenum">月售 N 份</div>'+
+			'	<div class="app_submain_list_grade">0</div>'+
+			'	<div class="app_submain_list_price"><span class="addnums"></span><font>￥32元</font></div>'+
+			'</div>';
+	var $tempwrap = $("<div>");
+	var $addtotar = $(".app_submain_myorder_content>ul");
+	$.ajax({
+		type : "get",
+		url:"js/demoCallback/demojsonp_1.js",
+		dataType : "jsonp",
+		jsonpCallback: "dinerlist"
+	}).done(function(d) {
+		$.each(d,function(i,data) {
+			var $cache = $($temp);
+			$cache.find(".app_submain_list_menuname > font").html(data["name"]);
+			$cache.find(".app_submain_hotalimg > img ").attr("src", data["img"]);
+			$cache.find(".app_submain_list_salenum").html("月售 "+ data["seles"] +" 份");
+			$cache.find(".app_submain_list_grade").html(data["gjobs"]);
+			$cache.find(".app_submain_list_price font").html("￥"+ data["price"] +"元");
+			$cache.data({
+				"name":data["name"],
+				"price": data["price"],
+				"count":i
+			});
+			$tempwrap.append($cache);
+		});
+		var innerhtml = $tempwrap.children().unwrap();
+		innerhtml.each(function(i,el) {
+			$(el).attr("count","count_"+i);
+		});
+		$(".app_submain_list_head").nextAll().remove().end().after(innerhtml);
+		fadeInhoveffect($('.app_submain_list_content .app_submain_list_menuname') , '.app_submain_hotalimg');
+		$(".app_submain_content").on("click", ".app_submain_list_grade", function() {
+			var _this = $(this);
+			_this.toggleClass("gjob");
+			if ( _this.hasClass("gjob") ) {
+				_this.html( Number(_this.html())+1 );
+			} else {
+				_this.html( Number(_this.html())-1 );
+			}
+			
+		}).on("click", ".addnums", function(e) {
+			var _this  = $(this);
+			var _parent = _this.closest(".app_submain_list_content");
+			var $targetEl = $addtotar.find("#count_"+ _parent.data("count"));
+			if ($targetEl.length) {
+				var inputs = $targetEl.find(".myordernums");
+				inputs.val(parseInt(inputs.val())+1);
+				$addtotar.trigger("valuechange");
+			} else {
+				var temps = $('<li><span class="myorderminus"></span><span class="myordername">佛跳墙(位</span><input type="text" class="myordernums" value="1" /><span class="myorderunitprice">￥108.00</span><span class="myorderplus"></span></li>');
+				temps.attr("id","count_"+_parent.data("count"));
+				temps.data("price",_parent.data("price"));
+				temps.find(".myordername").html( _parent.data("name"))
+				temps.find(".myorderunitprice").html("￥"+ _parent.data("price") +"");
+				$addtotar.append(temps);
+				$addtotar.trigger("valuechange");
+			}
+			
+		});
+		
+		$addtotar.on("valuechange", function() {
+			var _this = $(this);
+			var eachVal = _this.find("input.myordernums");
+			var vals = 0;
+			eachVal.each(function(i,e) {
+				vals = parseInt(vals) + parseInt($(e).val())*$(e).closest("li").data("price") ;
+			});
+			//console.log(vals)
+			$addtotar.next(".myorderinall").html("总价￥"+ vals)
+		}).on("click", ".myorderplus", function() {
+			var nums = $(this).closest("li").find(".myordernums")
+			nums.val( parseInt(nums.val()) + 1 )
+			$addtotar.trigger("valuechange");
+		}).on("click", ".myorderminus", function() {
+			var nums = $(this).closest("li").find(".myordernums")
+			nums.val( parseInt(nums.val()) - 1 );
+			if ( parseInt(nums.val()) < 0 ) {
+				$(this).closest("li").remove();
+			}
+			$addtotar.trigger("valuechange");
+		});
+		
+		$(".empty", ".app_submain_myorder").on("click", function(e) {
+			$addtotar.find("li").remove();
+			$addtotar.trigger("valuechange");
+		});
+	}).error(function(s) {
+		//console.log(s)
+	})
+}
 
 var jayfunction = function() {
 	//定义变量
@@ -197,7 +292,9 @@ var jayfunction = function() {
 	sideshow($(".app-slideshow"));
 	rosefunction();
 	//links
-	links();
+	//links();
+	//订餐页面js
+	orders();
 };
 
 

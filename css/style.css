@@ -1020,8 +1020,13 @@ html.ie7 {
 }
 .app_submain_list_content .app_submain_list_grade{
 	padding-left: 25px;
+	cursor: pointer;
 	width: 40px;
 	background: url(../images/app-ico-grade.png) no-repeat 0 6px;
+}
+.app_submain_list_content .gjob {
+	background: url(../images/app-ico-grade2.png) no-repeat 0 6px;
+	color: #c10262;
 }
 .app_submain_list_content .app_submain_list_price{
 	color:#e8380d;
