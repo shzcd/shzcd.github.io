@@ -128,118 +128,130 @@
 			</div>			
 		</div>
 		<div class="app_content">
-			<div class="app_con_layouts">
-				<div class="app_clt" id="app_clt">
-					<div class="app_clt_topR">
-						<div class="app_clt_topL">
-							<div class="con_tool_bar_searchBar">
-								<div class="searchBarL">
-									<input type="text" class="sbInp">
-									<input type="button" class="sbBtn" value="">
-								</div>
-							</div>
-							<div class="con_tool_bar_icon"><img src="images/icon_locaction.png" alt=""></div>
-							<div class="con_tool_bar_localTotal">当前共有164家餐厅</div>
-							<div class="con_tool_bar_local">当前地址：<span id="localNow">五角场(地铁站)</span></div>
-							<div class="con_tool_bar_localChange">[更改地址]</div>
-						</div>
+			<div class="app_con_layouts height_min_contentheight1">
+				<div class="loca_pic"></div>
+				<div class="loca_box">
+					<div class="winner">
+						<table cellpadding="0" cellspacing="0" class="lcaBoxTable">
+							<tr>
+								<td class="wx1">
+									<input type="text" placeholder="我在哪儿"> 
+								</td>
+								<td class="wx2">
+									<input type="button" value="查找餐厅">
+								</td>
+							</tr>
+							<tr>
+								<td class="wx3" colspan="2">
+									<span>热门区域：</span><a href="#" class="wx3hotlink">五角场</a><a href="#" class="wx3hotlink">徐家汇</a><a href="#" class="wx3hotlink">漕河泾开发区</a><a href="#" class="wx3hotlink">静安寺</a><a href="#" class="wx3hotlink">浦东软件开发区</a>
+								</td>
+							</tr>
+						</table>
 					</div>
 				</div>
-				<div class="app_box height_min_contentheight">
-					<div class="app_subbanner"><img src="images/banner/sub-banner.jpg" alt=""></div>
-					<div class="app_subhotal clearfix">
-						<div class="app_subhotal_logo"><img src="images/app-subhotal-logo.jpg" alt=""></div>
-						<div class="app_subhotal_info">
-							<div class="app_subhotal_info_name">洲际酒店集团</div>
-							<div class="app_subhotal_info_address">潍坊市奎文区胜利街文化路交汇处南200路西</div>
-						</div>
-						<div class="app_subhotal_info">
-							<div class="app_subhotal_info_type">宴请聚餐,西式餐厅</div>
-							<div class="app_subhotal_info_time">营业时间:10:30-14:30,16:30-21:30</div>
-						</div>
-						<div class="app_subhotal_func">
-							<a href="#" class="app_subhotal_func_collect">收藏餐厅</a><br/>
-							<a href="#" class="app_subhotal_func_message">餐厅留言</a>
-						</div>	
-					</div>
-					<div class="app_submain app_submain_pay clearfix">
-						<div class="app_submain_sidebar">
-						</div>
-						<div class="app_submain_content">
-							<div class="payprice">请选择剩余<span>￥1710</span> 的支付方式</div>
-							<div class="paymethod">
-								<h3>支付宝/财付通支付</h3>
-								<div class="app-marB15 clearfix">
-									<span class="paymethodcell">
-										<input type="radio" name="paymethodico" class="paymethodradio" id="radio1" />
-										<label class="paymethodico" for="radio1"></label>
-									</span>							
-								</div>
-								<h3>网上银行支付<span class="f-fs12">（支付储存卡和信用卡）</span></h3>
-								<div class="clearfix">
-									<span class="paymethodcell">
-										<input type="radio" name="bankcash" class="paymethodradio" id="bank-cash-bocm"/>
-										<label class="paymethodico bank-bocm" for="bank-cash-bocm"></label>
-									</span>	
-									<span class="paymethodcell">
-										<input type="radio" name="bankcash" class="paymethodradio" id="bank-cash-icbc"/>
-										<label class="paymethodico bank-icbc" for="bank-cash-icbc"></label>
-									</span>	
-									<span class="paymethodcell">
-										<input type="radio" name="bankcash" class="paymethodradio" id="bank-cash-ccb"/>
-										<label class="paymethodico bank-ccb" for="bank-cash-ccb"></label>
-									</span>		
-									<span class="paymethodcell">
-										<input type="radio" name="bankcash" class="paymethodradio" id="bank-cash-aboc"/>
-										<label class="paymethodico bank-aboc" for="bank-cash-aboc"></label>
-									</span>	
-									<span class="paymethodcell">
-										<input type="radio" name="bankcash" class="paymethodradio" id="bank-cash-cmb"/>
-										<label class="paymethodico bank-cmb" for="bank-cash-cmb"></label>
-									</span>	
-									<span class="paymethodcell">
-										<input type="radio" name="bankcash" class="paymethodradio" id="bank-cash-boc"/>
-										<label class="paymethodico bank-boc" for="bank-cash-boc"></label>
-									</span>	
-
-									<span class="paymethodcell">
-										<input type="radio" name="bankcash" class="paymethodradio" id="bank-cash-psbc"/>
-										<label class="paymethodico bank-psbc" for="bank-cash-psbc"></label>
-									</span>	
-									<span class="paymethodcell">
-										<input type="radio" name="bankcash" class="paymethodradio" id="bank-cash-cib"/>
-										<label class="paymethodico bank-cib" for="bank-cash-cib"></label>
-									</span>	
-									<span class="paymethodcell">
-										<input type="radio" name="bankcash" class="paymethodradio" id="bank-cash-szpab"/>
-										<label class="paymethodico bank-szpab" for="bank-cash-szpab"></label>
-									</span>	
-
-									<span class="paymethodcell">
-										<input type="radio" name="bankcash" class="paymethodradio" id="bank-cash-cgb"/>
-										<label class="paymethodico bank-cgb" for="bank-cash-cgb"></label>
-									</span>	
-									<span class="paymethodcell">
-										<input type="radio" name="bankcash" class="paymethodradio" id="bank-cash-citic"/>
-										<label class="paymethodico bank-citic" for="bank-cash-citic"></label>
-									</span>	
-									<span class="paymethodcell">
-										<input type="radio" name="bankcash" class="paymethodradio" id="bank-cash-cmbc"/>
-										<label class="paymethodico bank-cmbc" for="bank-cash-cmbc"></label>
-									</span>					
-								</div>
-								<button class="btn-pay">去支付</button>
-							</div>
-
-							<div class="paytips">
-								<span class="title">温馨提示：</span>
-								<p>支付成功后请牢记您的消费密码，</p>
-								<p>我们将发送短信至您的手机，请注意查收！</p>
-								<p>如遗忘可到个人中心的订单详情中查看！</p>
-							</div>
-						</div>
+				<div class="local_tip_box">
+					<div style="padding: 10px;">
+						<h2>很抱歉，我们很难找到您的地址。</h2>
+						<p>请您检查地址拼写/格式是否正确， 或者联系我们客服获得帮助：0553-5891169</p>
 					</div>
 				</div>
+				<div class="addcom-wrap">
+					<div class="addcom">
+						+ 新餐厅入驻
+					</div>
+					<div class="addcom-adding" style="display: none;">
+						<h2>商家入驻申请</h2>
+						<table cellpadding="0" cellspacing="0" class="addaddadd">
+							<tbody class="addtext">
+								<tr>
+									<th>商户名称：</th>
+									<td><input type="text" placeholder="请输入商铺的名称，例如旺仔小铺">
+										<p class="error">商户名称不能为空</p>
+									</td>
+								</tr>
+								<tr>
+									<th>所属城市：</th>
+									<td><select name="" id="">
+											<option selected>请选择</option>
+											<option >上海</option>
+											<option >北京</option>
+											<option >广东</option>
+											<option >广西</option>
+											<option >内蒙古</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<th>行政分区：</th>
+									<td><select name="" id="">
+											<option selected>请选择</option>
+											<option >浦东</option>
+											<option >浦西</option>
+											<option >闵行区</option>
+										</select></td>
+								</tr>
+								<tr>
+									<th>店主姓名：</th>
+									<td><input type="text" placeholder="请输入联系人姓名"></td>
+								</tr>
+								<tr>
+									<th>联系电话：</th>
+									<td><input type="text" placeholder="请输入11位手机号码"></td>
+								</tr>
+							</tbody>
+							<tbody class="addcontor">
+								<tr>
+									<td>&nbsp;</td>
+									<td>
+										<input type="button" class="qr" value="确认"><input class="qx" type="button" value="取消">
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<script>
+				window.onload=function() {
+					require.config({
+						paths: {
+							"jquery": "jquery-1.11.1.min"
+							//,"autocomplate": "http://cdn.bootcss.com/jquery.devbridge-autocomplete/1.2.7/jquery.devbridge-autocomplete.min"
+						},
+						shim: {
+							//'autocomplate': {deps: ['jquery']}
+						}
+					});
+					require(["jquery"], function(jquery) {
+						var _a,_b;
+						_a = $(".addcom");
+						_b = $(".addcom-adding");
+						$(".addcom-wrap").on("click", ".addcom", function() {
+							_b.show();
+							_a.hide();
+						}).on("click", ".qx,.qr", function() {
+							_a.show();
+							_b.hide();
+						}).on("click", ".qr", function() {
+							alert("添加成功！")
+						});
+						
+						//弹出框
+						var popWrap = $(".locaPop-wrap");
+						var triggerEvent = $(".wx2 input");
+						triggerEvent.on("click", function() {
+							popWrap.show();
+							$("html,body").addClass("domnoscroll");
+							$(".closebtn").on("click.CLOSEPOP", function() {
+								popWrap.hide();
+								$(".closebtn").off(".CLOSEPOP");
+								$("html,body").removeClass("domnoscroll");
+							})
+						});
+						
+					})				
+				}
+				</script>
+				
 			</div>
 		</div>
 	</div>
@@ -251,6 +263,33 @@
 		<span class="app_site_btn-backtop" id="backtop"></span>
 	</div>
 	<div class="app_footer" id="app_footer">
+		<div class="app-foot-ads">
+			<div class="app_width">
+				<div class="house"></div>
+				<div class="innertext clearfix">
+					<a href="#" class="addcompany">
+						<span class="addcomPic" style="background-image:url(images/boxi_temp_img.gif)"></span>
+						<span class="addcomText">餐厅入驻</span>
+					</a>
+					<a href="#" class="addcompany">
+						<span class="addcomPic" style="background-image:url(images/boxi_temp_img.gif)"></span>
+						<span class="addcomText">餐厅入驻</span>
+					</a>
+					<a href="#" class="addcompany">
+						<span class="addcomPic" style="background-image:url(images/boxi_temp_img.gif)"></span>
+						<span class="addcomText">餐厅入驻</span>
+					</a>
+					<a href="#" class="addcompany">
+						<span class="addcomPic" style="background-image:url(images/boxi_temp_img.gif)"></span>
+						<span class="addcomText">餐厅入驻</span>
+					</a>
+					<a href="#" class="addcompany">
+						<span class="addcomPic" style="background-image:url(images/boxi_temp_img.gif)"></span>
+						<span class="addcomText">餐厅入驻</span>
+					</a>
+				</div>
+			</div>
+		</div>
 		<div class="aflist_wrap">
 			<table cellpadding="0" cellspacing="0" class="aflist">
 				<tr class="aflist_col">
@@ -311,6 +350,43 @@
 		<div class="app_dialog_pic"></div>
 	</div>
 </div>
+
+<div class="locaPop-wrap" style="display: none;">
+	<span class="midfix"></span>
+	<div class="minblock searchLoca">
+		<h2 class="sl-title">请选择最靠近你的地址
+			<div class="closebtn">X</div>
+		</h2>
+		<div class="sl-box">
+			<ul class="sl-box-list">
+				<li><a href="#"><h3>上海</h3><span></span></a></li>
+				<li><a href="#"><h3>上海闵行区</h3><span>123123</span></a></li>
+				<li><a href="#"><h3>上海浦东新区</h3><span>333123123</span></a></li>
+				<li><a href="#"><h3>上海黄埔</h3><span>123123</span></a></li>
+				<li><a href="#"><h3>上海黄埔</h3><span>123123</span></a></li>
+				<li><a href="#"><h3>上海黄埔</h3><span>123123</span></a></li>
+				<li><a href="#"><h3>上海黄埔</h3><span>123123</span></a></li>
+				<li><a href="#"><h3>上海黄埔</h3><span>123123</span></a></li>
+				<li><a href="#"><h3>上海黄埔</h3><span>123123</span></a></li>
+				<li><a href="#"><h3>上海黄埔</h3><span>123123</span></a></li>
+				<li><a href="#"><h3>上海黄埔</h3><span>123123</span></a></li>
+				<li><a href="#"><h3>上海黄埔</h3><span>123123</span></a></li>
+				<li><a href="#"><h3>上海黄埔</h3><span>123123</span></a></li>
+				<li><a href="#"><h3>上海黄埔</h3><span>123123</span></a></li>
+				<li><a href="#"><h3>上海闸北</h3><span>123123</span></a></li>
+				<li><a href="#"><h3>上海徐汇</h3><span>123123123</span></a></li>
+				<li><a href="#"><h3>上海金山</h3><span>123123啊实打实大师暗示大神大神大声点阿斯顿阿打算打算啊暗示大sd</span></a></li>
+			</ul>
+		</div>
+		<div class="sl-box-bottom">
+			<p>以上列出地址都不正确么？</p>
+			<p>请您检查地址拼写/格式是否正确和 <font color="red">重新输入您的地址。</font></p>
+		</div>
+	</div>
+</div>
+
+
+
 </body>
 <!-- Javascript with AMD
 ================================================== -->

@@ -15,6 +15,13 @@ function winCssHeight() {
 	//配置自定义CSS高度的参数
 	scalcNum = [
 		["winheight",0],
+		["contentheight1",(function() {
+			return parseInt(
+					$("#app_footer").outerHeight() +
+					$(".app_head").outerHeight()
+				);
+			})()
+		],
 		["contentheight", (function() {
 			return parseInt(
 					$("#app_clt").outerHeight() + 
@@ -185,6 +192,9 @@ function links() {
 }
 //orders 订餐页面js  这里我假设我读取了一个jsonp，后面请自己定义jsonp这里只是参考
 function orders() {
+	if ( $(".ordering").length < 1 ) {
+		return ;
+	}
 	var $temp = 
 			'<div class="app_submain_list_content clearfix">'+
 			'	<div class="app_submain_list_menuname"><font>名字</font> <span class="app_submain_hotalimg"><img src="images/app_subhotal_img.png" alt=""></span> </div>'+
