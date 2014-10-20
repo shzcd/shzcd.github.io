@@ -75,7 +75,7 @@
 	<div class="app_containt app_width">
 		<div class="app_head">
 			<div class="app_head_left">
-				<div class="app_head_logo"></div>
+				<a href="index.html" class="app_head_logo"></a>
 				<div class="app_switch_local">
 					<span class="appLocaction">上海</span>
 					<span class="appLocactionSwitch">[切换城市]</span>
@@ -96,8 +96,8 @@
 					</div>
 
 				</div>
-				<div class="app_r_item app_signin"><span class="awp">注册</span></div>
-				<div class="app_r_item app_login"><span class="awp">登陆</span></div>
+				<div class="app_r_item app_signin"><span class="awp"><a href="register.html">注册</a></span></div>
+				<div class="app_r_item app_login"><span class="awp"><a href="login.html">登陆</a></span></div>
 			</div>
 		</div>
 		<div class="app_content">
@@ -129,30 +129,28 @@
 								<li>
 									<div class="sidenav-first sidenav-ico01">订单中心</div>
 									<div class="sidenav-second">
-										<a href="###" class="sidenav-second-01 ico01 cur">我的外卖订单</a>
-										<a href="###" class="sidenav-second-01 ico02">我的订餐订单</a>
+										<a href="personalcenter-order" class="sidenav-second-01 ico01 cur">我的外卖订单</a>
+										<a href="personalcenter-order" class="sidenav-second-01 ico02">我的订餐订单</a>
 									</div>
 								</li>
 								<li>
 									<div class="sidenav-first sidenav-ico02">我的收藏</div>
 									<div class="sidenav-second">
-										<a href="###" class="sidenav-second-02 ico01">我收藏的餐厅</a>
-										<a href="###" class="sidenav-second-02 ico02">我收藏的美食</a>
+										<a href="personalcenter-favor.html" class="sidenav-second-02 ico01">我收藏的餐厅</a>
 									</div>
 								</li>
 								<li>
 									<div class="sidenav-first sidenav-ico03">账号相关</div>
 									<div class="sidenav-second">
-										<a href="###" class="sidenav-second-03 ico01">我的信箱</a>
-										<a href="###" class="sidenav-second-03 ico02">我的地址</a>
-										<a href="###" class="sidenav-second-03 ico03">邀请好友<em class="hottips">HOT</em></a>
+										<a href="personalcenter-address.html" class="sidenav-second-03 ico02">我的地址</a>
+										<a href="personalcenter-invite.html" class="sidenav-second-03 ico03">邀请好友<em class="hottips">HOT</em></a>
 									</div>
 								</li>
 								<li class="gray">
 									<div class="sidenav-first sidenav-ico04">安全中心</div>
 									<div class="sidenav-second">
-										<a href="###" class="sidenav-second-04 ico01">修改密码</a>
-										<a href="###" class="sidenav-second-04 ico02">安全设置</a>
+										<a href="personalcenter-security.html" class="sidenav-second-04 ico01">修改密码</a>
+										<a href="###" class="sidenav-second-04 ico02">退出登陆</a>
 									</div>
 								</li>
 							</ul>
@@ -173,28 +171,28 @@
 											</div>
 										</div>
 										<div class="col-right">
-											<p class="account-balance"><span>代金券：</span>0.00元</p>
+											<!-- <p class="account-balance"><span>代金券：</span>0.00元</p> -->
 											<p class="account-balance"><span>账户余额：</span>0.00元</p>
 										</div>
 									</div>
 									<ul class="related-info clearfix">
 										<li><i class="icon-point"></i>积分：<a href="">0</a>点</li>	
-										<li><i class="icon-star"></i>收藏：<a href="">0</a>家餐厅  <a href="">0</a>份美食</li>
+										<li><i class="icon-star"></i>收藏：<a href="">0</a>家餐厅</li>
 										<li><i class="icon-order"></i>完成订单：<a href="">0</a>张（一个月内完成）</li>
 									</ul>
 								</div>								
 							</div>
 
 							<div class="app-marB10 clearfix">
-								<div class="f-fl latest-orders-title">最近订餐订单</div>
-								<div class="f-fl latest-orders-title gray">最近订餐订单</div>
+								<div class="f-fl latest-orders-title">我的订单</div> <a href="#"><font color="red">订单详情</font></a>
 							</div>
 
-							<div class="clearfix">
+							<!-- <div class="clearfix">
 								<div class="f-fl app-marB10 app-marR20 app-accountbg01">
 									<div class="latest-orders-cell">
 										<h6>订单ID</h6>
 										<p><a href="#" class="icon-order">五角场(地铁站)</a></p>
+							                                        
 									</div>
 								</div>
 								<div class="f-fl app-marB10 app-marR20 app-accountbg01">
@@ -218,12 +216,49 @@
 								<div class="f-fl app-marB10 app-accountbg01">
 									<div class="latest-orders-cell">
 										<h6>订单详情</h6>
-										<p><a href="#" class="icon-order">正在配送中</a></p>
+										<p><a href="#" class="icon-order">取消|查看详细</a></p>
 									</div>
 								</div>
-
-							</div>
-
+							
+							</div> -->
+							
+							
+							<div class="account-list-mgr">
+								<table cellpadding="0" cellspacing="0">
+									<tr>
+										<td>创建时间</td>
+										<td>订单编号</td>
+										<td>订单类型</td>
+										<td>餐厅</td>
+										<td>状态</td>
+										<td>操作</td>
+									</tr>
+									<tr>
+										<td>2014年10月20日</td>
+										<td>xxxxxxxxxx</td>
+										<td>热菜</td>
+										<td>某某餐厅</td>
+										<td>配送中</td>
+										<td><a href="#" class="" style="margin-right: 10px;">取消订单</a> <a href="#">查看详情</a></td>
+									</tr>
+									<tr>
+										<td>2014年10月20日</td>
+										<td>xxxxxxxxxx</td>
+										<td>热菜</td>
+										<td>某某餐厅</td>
+										<td>配送中</td>
+										<td><a href="#" class="" style="margin-right: 10px;">取消订单</a> <a href="#">查看详情</a></td>
+									</tr>
+									<tr>
+										<td>2014年10月20日</td>
+										<td>xxxxxxxxxx</td>
+										<td>热菜</td>
+										<td>某某餐厅</td>
+										<td>配送中</td>
+										<td><a href="#" class="" style="margin-right: 10px;">取消订单</a> <a href="#">查看详情</a></td>
+									</tr>
+								</table>
+							</div>	
 								
 
 

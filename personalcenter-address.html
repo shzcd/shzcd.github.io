@@ -75,7 +75,7 @@
 	<div class="app_containt app_width">
 		<div class="app_head">
 			<div class="app_head_left">
-				<div class="app_head_logo"></div>
+				<a href="index.html" class="app_head_logo"></a>
 				<div class="app_switch_local">
 					<span class="appLocaction">上海</span>
 					<span class="appLocactionSwitch">[切换城市]</span>
@@ -143,7 +143,7 @@
 								<li>
 									<div class="sidenav-first sidenav-ico03">账号相关</div>
 									<div class="sidenav-second">
-										<a href="###" class="sidenav-second-03 ico01">我的信箱</a>
+										
 										<a href="###" class="sidenav-second-03 ico02">我的地址</a>
 										<a href="###" class="sidenav-second-03 ico03">邀请好友<em class="hottips">HOT</em></a>
 									</div>
@@ -161,33 +161,57 @@
 							<div class="maintitle">管理我的地址</div>
 							<div class="address_tips">已经保存的送餐地址</div>
 							<table class="address_table">
-							    <thead>
-							      <tr>
-							        <th width="25%">地址</th>
-							        <th width="25%">手机号</th>
-							        <th width="25%">备选电话</th>
-							        <th width="25%">操作</th>
-							      </tr>
-							    </thead>
-							    <tbody>
-							    </tbody>
+								<thead>
+									<tr>
+										<th width="25%">收单人</th>
+										<th width="25%">手机号</th>
+										<th width="25%">送餐地址</th>
+										<th width="5%">操作</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>王大锤</th>
+										<td>13221132554</th>
+										<td>xxxxxxxxxxxxxxxxxxxxxxxx</th>
+										<td><a href="#" class="editAddres" style="margin-right: 10px;">修改</a> <a href="#">删除</a></th>
+									</tr>
+									<tr>
+										<td>王大锤</th>
+										<td>13221132554</th>
+										<td>xxxxxxxxxxxxxxxxxxxxxxxx</th>
+										<td><a href="#" class="editAddres" style="margin-right: 10px;">修改</a> <a href="#">删除</a></th>
+									</tr>
+									<tr>
+										<td>王大锤</th>
+										<td>13221132554</th>
+										<td>xxxxxxxxxxxxxxxxxxxxxxxx</th>
+										<td><a href="#" class="editAddres" style="margin-right: 10px;">修改</a> <a href="#">删除</a></th>
+									</tr>
+									<tr>
+										<td>王大锤</th>
+										<td>13221132554</th>
+										<td>xxxxxxxxxxxxxxxxxxxxxxxx</th>
+										<td><a href="#" class="editAddres" style="margin-right: 10px;">修改</a> <a href="#">删除</a></th>
+									</tr>
+								</tbody>
 							</table>
-
 							<div class="app-marB10 clearfix">
-								<div class="f-fl latest-orders-title">新增</div>
+								<div class="f-fl latest-orders-title">新增</div><span style="font-size: 12px; vertical-align: middle;"><font color="#5fc4f2">最多只能保存8个有效地址</font></span>
 							</div>
 
 							<div class="blockwrap clearfix app-changepassword">
 								<div class="orderformcell">
-									<label>详细地址：</label><input type="text">(请填写真实详细的送餐地址)
+									<label>收单人：</label><input type="text"><span class=""><font color="red">不能为空!</font></span>
 								</div>
 								<div class="orderformcell">
-									<label>手机号码：</label><input type="text">(请保证外卖能打通该号码)
+									<label>手机号码：</label><input type="text"><span class=""><font color="red">不能为空!</font></span>
 								</div>
 								<div class="orderformcell">
-									<label>备用电话：</label><input type="text">(备用电话方便外卖能联系到你)
+									<label>送餐地址：</label><input type="text"><span class=""><font color="red">不能为空!</font></span>
 								</div>								
-							</div>	
+							</div>
+							<input type="button" class="changepassword-btn" value="保存地址">	
 
 						</div>
 						
@@ -259,8 +283,64 @@
 		<div class="app_dialog_pic"></div>
 	</div>
 </div>
+<div class="locaPop-wrap" style="display: none;">
+	<span class="midfix"></span>
+	<div class="minblock searchLoca" style="width: 360px;">
+		<h2 class="sl-title">修改地址
+			<div class="closebtn">X</div>
+		</h2>
+		<div class="locpopcent">
+			<table class="changeLoal" cellpadding="0" cellspacing="0">
+				<tr>
+					<th>收单人：</th>
+					<td><input type="text" placeholder="不能为空"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<th>手机号码：</th>
+					<td><input type="text" placeholder="不能为空"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<th>送货地址：</th>
+					<td><input type="text" placeholder="不能为空"></td>
+					<td></td>
+				</tr>
+			</table>
+		</div>
+		<div class="contbar">
+			<input type="button" class="yes" value="确 认"><input type="button" class="no" value="取 消">
+		</div>
+	</div>
+</div>
+
 </body>
 <!-- Javascript with AMD
 ================================================== -->
 <script src="js/require.js" data-main="js/main" ></script>
+<script>
+window.onload=function() {
+	require.config({
+		paths: {
+			"jquery": "jquery-1.11.1.min"
+		}
+	});
+	require(["jquery"], function(jquery) {
+
+		//弹出框
+		var popWrap = $(".locaPop-wrap");
+		var triggerEvent = $(".editAddres");
+		triggerEvent.on("click", function() {
+			popWrap.show();
+			$("html,body").addClass("domnoscroll");
+			$(".closebtn").on("click.CLOSEPOP", function() {
+				popWrap.hide();
+				$(".closebtn").off(".CLOSEPOP");
+				$("html,body").removeClass("domnoscroll");
+			})
+		});
+		
+	})				
+}
+</script>
 </html>

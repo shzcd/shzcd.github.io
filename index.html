@@ -75,16 +75,56 @@
 	<div class="app_containt app_width">
 		<div class="app_head">
 			<div class="app_head_left">
-				<div class="app_head_logo"></div>
+				<a href="index.html" class="app_head_logo"></a>
 				<div class="app_switch_local">
 					<span class="appLocaction">上海</span>
-					<span class="appLocactionSwitch">[切换城市]</span>
+					<span class="appLocactionSwitch">[切换城市]
+						<div class="app_swith_local_content">
+							<div class="app_swith_local_icoarrow"></div>
+							<div class="app-tl"><div class="app-tr"><div class="app-tc"></div></div></div>
+							<div class="app-ml">
+								<div class="app-mr">
+									<div class="app-mc">
+										<div class="appLocactionSwitchcity">
+											<div class="clearfix">
+												<div class="f-fl">
+													<span class="f-fl">请选择你所在的城市 | 猜你在</span>
+													<span class="app-cicle-L f-fl"><span class="app-cicle-R">上海</span></span>
+													<span class="f-fl">|</span>
+													<span class="app-cicle-L f-fl"><span class="app-cicle-R"><input type="text" class="app-inp" placeholder="请输入城市"></span></span>
+													<span class="app-cicle-L f-fl"><span class="app-cicle-R">搜索</span></span>
+												</div>
+												<div class="f-fr"><span class="f-csp active">选城市</span> &gt; <span class="f-csp">定位子</span> &gt; <span class="f-csp">叫外卖</span> </div>
+											</div>
+											<div>
+												<span class="f-csp">上海</span> | 
+												<span class="f-csp">苏州</span> | 
+												<span class="f-csp">南京</span> |
+												<span class="f-csp">芜湖</span> |
+												<span class="f-csp">无锡</span> |
+												<span class="f-csp">常熟</span> |
+												<span class="f-csp">昆山</span> |
+												<span class="f-csp">宁波</span> |
+												<span class="f-csp">杭州</span> |
+												<span class="f-csp">温州</span> |
+												<span class="f-csp">潍坊</span> |
+												<span class="f-csp">宿州</span> |
+												<span class="f-csp">绍兴</span> |
+												<span class="f-csp">昆山</span>
+											</div>	
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="app-bl"><div class="app-br"><div class="app-bc"></div></div></div>				
+						</div>
+					</span>
 				</div>
 			</div>
 			<div class="app_head_right">
-				<div class="app_r_item app_bookcheck"><span class="awp">查看订单</span></div>
-				<div class="app_r_item app_signin"><span class="awp">注册</span></div>
-				<div class="app_r_item app_login"><span class="awp">登陆</span></div>
+				<div class="app_r_item app_bookcheck"><span class="awp"><a href="personalcenter.html">查看订单</a></span></div>
+				<div class="app_r_item app_signin"><span class="awp"><a href="register.html">注册</a></span></div>
+				<div class="app_r_item app_login"><span class="awp"><a href="login.html">登陆</a></span></div>
 			</div>
 		</div>
 		<div class="app_content">
@@ -101,7 +141,7 @@
 							
 							<div class="con_tool_bar_localTotal">开通城市：潍坊</div>
 							<div class="con_tool_bar_local">泰安</div>
-							<div class="con_tool_bar_localChange">直接进入：上海 </div>
+							<div class="con_tool_bar_localChange">直接进入：<a href="default.html">上海</a> </div>
 						</div>
 					</div>
 				</div>
@@ -168,6 +208,21 @@
 		</div>
 	</div>
 </div>
+
+<div class="app_dialog_wrap" style="display: none;">
+	<div class="app_dialog_mask"></div>	
+	<div class="app_dialog_content">
+		<div class="app_dialog_text">请选择您需要的服务<br>外卖服务请在 <em>上午11:00前</em> 使用</div>
+		<div class="clearfix">
+			<div class="app_dialog_btn blue app_restaurant_order" onclick="window.location.href='location.html'">点餐</div>
+			<div class="app_dialog_btn blue hide app_restaurant_order_service"><span>去餐厅吃饭<br><b>请选择点餐服务</b></span></div>
+			<div class="app_dialog_btn red app_home_order" onclick="window.location.href='location.html'">订餐</div>
+			<div class="app_dialog_btn red hide  app_home_order_service"><span>在家叫外卖<br><b>请选择外卖服务</b></span></div>
+		</div>		
+		<div class="app_dialog_pic"></div>
+	</div>
+</div>
+
 </body>
 <!-- Javascript with AMD
 ================================================== -->

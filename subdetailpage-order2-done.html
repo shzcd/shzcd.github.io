@@ -159,93 +159,130 @@
 						</div>
 						<div class="app_subhotal_func">
 							<a href="#" class="app_subhotal_func_collect">收藏餐厅</a><br/>
-							<a href="#" class="app_subhotal_func_message">餐厅留言</a>
+							<a href="comments.html" class="app_subhotal_func_message">餐厅留言</a>
 						</div>	
 					</div>
 					<div class="app_submain app_submain_order clearfix">
-						<div class="app_submain_sidebar">
-						</div>
-						<div class="app_submain_content">
-							<div class="ordertitle">
-								<span class="orderprogress">
-									<em class="pos1">选择美食</em>
-									<em class="pos2">订单信息</em>
-									<em class="pos3">完成订单</em>
-								</span>
-							</div>
-							<div class="orderlist">
-								<div class="app_submain_list_head orderlist-head clearfix">		
-										<div class="app_submain_list_menuname">菜单</div>
-										<div class="app_submain_list_price">单价</div>
-										<div class="app_submain_list_salenum">数量</div>
-										<div class="app_submain_list_total">总计</div>
-								</div>
-								<div class="orderlist-ul">									
-									<div class="app_submain_list_content clearfix">
-										<div class="app_submain_list_menuname">鱼翅佛跳...</div>
-										<div class="app_submain_list_price">￥110.00</div>
-										<div class="app_submain_list_salenum">
-											<span>
-												<em class="orderlist-minus">-</em>
-												<input class="orderlist-input" type="text" value="1">
-												<em class="orderlist-plus">+</em>
-											</span>
-										</div>
-										<div class="app_submain_list_total">￥110.00</div>	
-									</div>	
-									<div class="app_submain_list_content clearfix">
-										<div class="app_submain_list_menuname">佛跳墙(位...</div>
-										<div class="app_submain_list_price">￥110.00</div>
-										<div class="app_submain_list_salenum">
-											<span>
-												<em class="orderlist-minus">-</em>
-												<input class="orderlist-input" type="text" value="1">
-												<em class="orderlist-plus">+</em>
-											</span>
-										</div>
-										<div class="app_submain_list_total">￥110.00</div>	
-									</div>
-									<div class="app_submain_list_content orderlist-ul-li-end clearfix">
-										<div class="app_submain_list_menuname">套餐</div>
-										<div class="app_submain_list_price">单价</div>
-										<div class="app_submain_list_salenum">数量</div>
-										<div class="app_submain_list_total">总计</div>	
-									</div>		
-								</div>
-								<div class="app_submain_list_head orderlist-foot clearfix">		
-										<div class="app_submain_list_menuname"><a href="">返回继续添菜</a></div>
-										<div class="app_submain_list_price">共2份美食</div>
-										<div class="app_submain_list_salenum">应付金额：</div>
-										<div class="app_submain_list_total">￥220.00</div>
+						<div class="maintitle">送餐信息</div>
+						<div class="appsubbox">
+							<ul class="appsubAddres">
+								<li class="row cur">
+									<span class="cell">张三</span>
+									<span class="cell">什么路什么路搜啊实打实</span>
+									<span class="cell">13255456464</span>
+									<span class="cell"><a href="#" class="asa_edit">修改</a><a href="#" class="asa_del">删除</a></span>
+								</li>
+								<li class="row">
+									<span class="cell">李四</span>
+									<span class="cell">什么路什么路搜啊实打实</span>
+									<span class="cell">13255456464</span>
+									<span class="cell"><a href="#" class="asa_edit">修改</a><a href="#" class="asa_del">删除</a></span>
+									
+								</li>
+								<li class="row">
+									<span class="cell">王五</span>
+									<span class="cell">什么路什么路搜啊实打实什么路什么路搜啊实打实什么路什么路搜啊实打实</span>
+									<span class="cell">13255456464</span>
+									<span class="cell"><a href="#" class="asa_edit">修改</a><a href="#" class="asa_del">删除</a></span>
+									
+								</li>
+								<li class="row">
+									<span class="cell">张三</span>
+									<span class="cell">什么路什么路搜啊实打实</span>
+									<span class="cell">13255456464</span>
+									<span class="cell"><a href="#" class="asa_edit">修改</a><a href="#" class="asa_del">删除</a></span>
+								</li>
+							</ul>
+							
+							<div style="text-align: center;">
+								<div class="addNewAddres">
+									+ 添加新地址
 								</div>
 							</div>
-							<div class="orderform">
-								<button class="orderform-btn">提交订单</button>
+							
+							<div class="payment">
+								<table cellpadding="0" cellspacing="0">
+									<tr>
+										<th>送餐时间</th>
+										<td>
+											<select name="" id="">
+												<option selected>1</option>
+												<option>2</option>
+												<option>33</option>
+												<option>1</option>
+												<option>4</option>
+											</select>
+										</td>
+										<th>付款方式</th>
+										<td>
+											<select name="" id="">
+												<option selected>在线付款</option>
+												<option>货到付款</option>
+											</select>
+										</td>
+										<th>备注</th>
+										<td>
+											<input type="text" placeholder="如:米饭多，不吃辣">
+										</td>
+										
+									</tr>
+								</table>
 							</div>
-							<div class="orderformcell">
-								<label>联&nbsp;系&nbsp;&nbsp;人：</label><input type="text">
-								<span class="f-fl app-marR10">
-									<input type="radio" id="man" name="sex" checked><label for="man">男</label>
-									<input type="radio" id="female" name="sex"><label for="female">女</label>
-								</span>
-								| 为了获得更好得服务，建议您采用真实的姓名
+							
+							<h2 class="payment-title">
+								订单内容
+							</h2>
+							<div class="payment-detail">
+								<table cellpadding="0" cellspacing="0">
+									<thead>
+										<tr>
+											<th width="1">商品</th>
+											<th width="1">份数</th>
+											<th width="1">单价</th>
+											<th width="2">总价</th>
+										</tr>
+									</thead>
+									<tfoot></tfoot>
+									<tbody>
+										<tr>
+											<td>吃的商品1</td>
+											<td>2</td>
+											<td>90</td>
+											<td>180</td>
+										</tr>
+										<tr>
+											<td>吃的商品1</td>
+											<td>2</td>
+											<td>90</td>
+											<td>180</td>
+										</tr>
+										<tr>
+											<td>吃的商品1</td>
+											<td>2</td>
+											<td>90</td>
+											<td>180</td>
+										</tr>
+										<tr>
+											<td>吃的商品1</td>
+											<td>2</td>
+											<td>90</td>
+											<td>180</td>
+										</tr>
+									</tbody>
+									
+									<tbody>
+										<tr>
+											<td colspan="4" style="text-align: right;">
+												<span style="padding-left: 10px;">订单金额:￥3303</span>
+												<span style="padding-left: 10px;">配送费:￥3303</span>
+												<span style="padding-left: 10px;">需付款:￥3303</span>
+											</td>
+										</tr>
+									</tbody>
+								</table>
 							</div>
-							<div class="orderformcell">
-								<label>联系手机：</label><input type="text">
-								为了方便和您取得联系，建议您留真实的联系电话
-							</div>
-							<div class="orderformcell">
-								<label>使用日期：</label><input type="text" value="2014-09-01 13:56">
-							</div>
-							<div class="orderformcell-title"><span class="orderformcell-title-tips">给商家留言</span></div>
-							<div class="orderformcell-textarea">
-								<h5>其他要求：</h5>
-								<textarea></textarea>
-							</div>
-							<div class="orderform clearfix">
-								<button class="orderform-btn">确定订单</button>
-								<span class="orderformcell-title-tips">支付：</span>订单总金额￥220.00
-								
+							<div class="payment-events">
+								<a href="#" class="backtoEdit">返回修改订单</a><input type="button" value="提交订单" onClick="window.location.href='subdetailpage-pay.html'">
 							</div>
 						</div>
 					</div>
@@ -321,6 +358,22 @@
 		<div class="app_dialog_pic"></div>
 	</div>
 </div>
+<div class="locaPop-wrap" style="display:;">
+	<span class="midfix"></span>
+	<div class="minblock searchLoca">
+		<h2 class="sl-title">订单已成功提交
+			<div class="closebtn">X</div>
+		</h2>
+		<div style="padding: 20px;">
+			<div class="smail">
+				: )
+			</div>
+			<p style="font-size: 12px; line-height: 24px;margin-top: -6px; margin-left: 42px;">请保持手机13800138000畅通，稍后送餐员会与你联系。</p>
+			<p style="font-size: 12px; line-height: 24px; margin-left: 42px;">感谢使用找吃哒。</p>
+		</div>
+	</div>
+</div>
+
 </body>
 <!-- Javascript with AMD
 ================================================== -->
