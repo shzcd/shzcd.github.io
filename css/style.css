@@ -259,6 +259,13 @@ table.addaddadd .addcontor input.qx {
 	width: 100px;
 	background: url(../images/app-logo.png) center center no-repeat;
 }
+.app_head_logo img {
+margin:10px 0 0 10px
+
+}
+
+
+
 .app_switch_local {
 	line-height: 66px;
 	font-size: 12px;
@@ -277,6 +284,10 @@ table.addaddadd .addcontor input.qx {
 	height: 22px;
 	padding-top: 22px;
 }
+
+.app_head_right a{ color:#fff; text-decoration:none;}
+.app_head_right a:hover{color:#fff;}
+
 
 .app_head_right .app_r_item {
 	float: right;
@@ -859,6 +870,21 @@ table.addaddadd .addcontor input.qx {
 	-webkit-transition-timing-function: cubic-bezier(0, .98, .58, 1);
 	transition-timing-function: cubic-bezier(0, .98, .58, 1);
 }
+.boxi_link .delthis {
+	display: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width:24px;
+	height: 24px;
+	background:#febc19;
+	color: #fff;
+	line-height: 24px;
+	text-align: center;
+}
+.boxi_link:hover .delthis {
+	display: block;
+}
 .boxi_link:hover {
 	border-color: #febc19;
 	box-shadow: 0 0 6px 0 #febc19;
@@ -1192,6 +1218,9 @@ table.addaddadd .addcontor input.qx {
 	padding-left:12px; height:26px; background:#c20262; margin-bottom:10px;
 	font:bold 13px/26px 'microsoft yahei'; color:#fff;
 }
+
+.contents{ font-weight:100; font-size:12px; line-height:20px; width:90%; margin:auto;}
+
 .app_submain_myorder_title{
 	padding-left: 62px;
 	height: 32px; background: #3c3c3b url(../images/app-ico-shopping.png) no-repeat 0 0;
@@ -1801,10 +1830,18 @@ table.addaddadd .addcontor input.qx {
 	width:220px; background:#fff; color:#9e9e9f;
 }
 
-.app-changepassword .changepassword-btn{
-	position:absolute; bottom:10px; right:20px;
-	padding:0 10px; border:none; background:#727172; border-radius:3px;
-	height:22px; font:14px/22px 'microsoft yahei'; color:#fff;
+.changepassword-btn{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	min-width: 150px;
+	padding:0 10px; 
+	border:none; 
+	background:#16a587; 
+	border-radius:3px;
+	height:32px; 
+	font:14px/22px 'microsoft yahei';
+	color:#fff;
 	cursor:pointer;
 }
 
@@ -1831,7 +1868,25 @@ table.addaddadd .addcontor input.qx {
 .app_personalcenter_main.app_personacenter_address .latest-orders-title{
 	width:90px; background-position:right 0; text-indent:10px;
 }
-
+.address_table th,
+.address_table td {
+	white-space:nowrap;
+	word-break:keep-all;
+	text-align: left;
+	line-height: 24px;
+	border: solid 1px #DDDDDD;
+}
+.address_table th {
+	background-color: #cdcdcd;
+	color: #475356;
+	line-height: 28px !important;
+	font-size: 14px !important;
+}
+.address_table td {
+	padding: 0 20px;
+	font-size: 12px;
+	background-color: #f8f8f8;
+}
 .personalcenter_tips,
 .address_tips{
 	font-size:12px; padding:10px 2px 5px; color:#4a4a49;
@@ -2049,7 +2104,7 @@ table.addaddadd .addcontor input.qx {
 	-moz-border-radius: 3px;
 	border-radius: 3px;
 	min-width: 360px;
-	max-width: 80%;
+	max-width: 520px;
 	text-align: left;
 	overflow: hidden;
 }
@@ -2104,7 +2159,7 @@ table.addaddadd .addcontor input.qx {
 .sl-box-list a span{
 	padding-left: 10px;
 }
-.sl-box-list li {float: left; width: 100%;}
+.sl-box-list li {float: left; width: 100%;border-bottom: solid 1px #DFDFDF;}
 .sl-box-bottom {
 	font-size: 14px;
 	padding:4px 10px;
@@ -2121,8 +2176,8 @@ table.addaddadd .addcontor input.qx {
 .appsubAddres .row {display: table-row; cursor:pointer;}
 .appsubAddres .cell {display: table-cell; padding: 10px; color: #989898}
 .appsubAddres .cur,
-.appsubAddres .row:hover{background:#fff;} 
-.appsubAddres .cur .cell {border:solid 1px #000; border-style:solid none; color: #000;}
+.appsubAddres .row:hover{background:#48bdee;} 
+.appsubAddres .cur .cell {border:solid 1px #147ad9; border-style:solid none; color: #000;}
 .appsubAddres .cur .cell:first-child {  border-style:solid none solid solid ;}
 .appsubAddres .cur .cell:last-child {  border-style:solid solid solid none;}
 .appsubbox .addNewAddres {
@@ -2251,4 +2306,94 @@ table.addaddadd .addcontor input.qx {
 	-moz-border-radius: 4px;
 	border-radius: 4px;
 	cursor: pointer;
+}
+.account-list-mgr {
+	
+}
+.account-list-mgr table {
+	width: 100%;
+	border-collapse:collapse;
+}
+.account-list-mgr td {
+	text-align: center;
+	line-height: 32px;
+	font-size: 12px;
+	color: #5C5C5C;
+	border:solid 1px #B3B3B3;
+	border-style:solid none;
+}
+.account-list-detail .tbw {width: 100%;}
+.account-list-detail .tbw-l {width: 10%;vertical-align: top; padding-right: 20px;}
+.account-list-detail .tbw-r {width: 90%;vertical-align: top;}
+.tbw-list-detail .tdwin {width: 100%; font-size: 12px;line-height: 24px;}
+.tbw-list-detail .thwin {white-space:nowrap; width:1%; padding-right: 10px; word-break:keep-all;}
+
+.tbw-list-detail2 .tdwin {width: 100%; font-size: 12px;line-height: 24px; }
+.tbw-list-detail2 .tdcss1 {padding: 0 10px;}
+.tbw-list-detail2 {border:solid 1px #D0D0D0}
+.tbw-list-detail2 thead .tdcss1 {
+	font-size: 14px;
+	background:#eee;
+	border-bottom:solid 1px #D0D0D0
+}
+.contbar {background:#F0F0F0; text-align: right;padding: 6px;}
+.contbar input.yes,
+.contbar input.no {
+	vertical-align: top;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	min-width: 80px;
+	height: 28px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0 10px;
+	font-size: 12px;
+	color: #fff;
+	margin-left: 6px;
+	cursor: pointer;
+	border-radius:2px;
+	font-family: "Helvetica Neue",\5FAE\8F6F\96C5\9ED1,Tohoma;
+}
+.contbar input.yes {background-color: #1ca587;}
+.contbar input.no {background-color: #8E8E8E;}
+
+.changeLoal {margin: 0 auto;}
+.changeLoal th,
+.changeLoal td {
+	font-size: 14px;
+	line-height: 28px;
+	word-break:keep-all;
+	white-space:nowrap;
+	padding: 4px 0;
+}
+
+.changeLoal th {padding: 0 10px;}
+.changeLoal td {}
+.changeLoal input {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	height: 28px;
+	padding: 0 10px;
+	border-radius:3px;
+	border:solid 1px #D7D7D7;
+}
+.smail {
+	width: 32px;
+	height: 32px;
+	line-height: 32px;
+	background:#00860B;
+	color: #fff;
+	font-size: 16px;
+	text-align: center;
+	border-radius:50px;
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	transform: rotate(90deg);
+	float: left;
+	margin-right: 10px;
 }

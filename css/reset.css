@@ -148,7 +148,8 @@ and (min-width : 1224px) {
 and (min-width : 1824px) {
 /* Styles */
 }
-
+a { text-decoration:none;}
+a:hover{ }
 
 
 
