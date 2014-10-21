@@ -2210,6 +2210,7 @@ margin:10px 0 0 10px
 	font-size: 16px;
 	line-height: 1.8;
 }
+.payment-detail {border: solid 1px #AAAAAA;}
 .payment-detail table {width: 100%;line-height: 28px; }
 .payment-detail th,
 .payment-detail td {
@@ -2218,11 +2219,11 @@ margin:10px 0 0 10px
 .payment-detail thead th {white-space: nowrap; word-break:keep-all; font-weight: bold;}
 .payment-detail thead th:last-child,
 .payment-detail tbody td:last-child {text-align: right;}
-.payment-detail thead tr {border: solid 1px #AAAAAA; border-bottom: none;}
+.payment-detail thead tr {/* border: solid 1px #AAAAAA; */ }
 .payment-detail thead th {background:#F9F9F9}
-.payment-detail tbody tr {border: solid 1px #AAAAAA;}
-.payment-detail tbody td {background-color: #fff;}
-
+.payment-detail tbody tr {/* border: solid 1px #AAAAAA; */}
+.payment-detail tbody td {background-color: #fff; font-size: 12px;}
+.payment-detail tfoot td{background-color: #F9F9F9; font-size: 14px;}
 .payment-events {text-align: right;padding: 10px 0;}
 .payment-events .backtoEdit {padding-right: 10px; color: #DFB400; text-decoration: none; vertical-align: middle; font-size: 12px;}
 .payment-events input {
